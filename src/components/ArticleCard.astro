@@ -1,6 +1,8 @@
 ---
 const { article } = Astro.props;
-const formattedDate = new Date(article.publishedAt ?? article.date).toLocaleDateString('en-US', {
+const rawDate = article.publishedAt ?? article.date;
+const isoDate = new Date(rawDate).toISOString();
+const formattedDate = new Date(rawDate).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'short',
   day: 'numeric',
@@ -19,13 +21,13 @@ const formattedDate = new Date(article.publishedAt ?? article.date).toLocaleDate
 >
   {article.image?.src && (
     <figure class="story-media">
-      <img src={article.image.src} alt={article.image.alt} loading="lazy" decoding="async" />
+      <img src={article.image.src} alt={article.image.alt} width="1600" height="900" loading="lazy" decoding="async" />
     </figure>
   )}
   <h3><a href={`/news/${article.slug}/`}>{article.title}</a></h3>
   <p class="byline-row">
     by <a href={`/authors/${article.authorSlug}/`}>{article.author}</a>
   </p>
-  <p class="meta">{formattedDate}</p>
+  <p class="meta"><time datetime={isoDate}>{formattedDate}</time></p>
   <p>{article.description}</p>
 </article>

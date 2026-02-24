@@ -1,6 +1,8 @@
-import { articles, authors } from '../data/news.js';
+import { articles, authors, desks } from '../data/news.js';
 
 const BASE_URL = 'https://videogennews.com';
+
+const deskSlug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 export function GET() {
   const staticUrls = [
@@ -19,10 +21,11 @@ export function GET() {
     '/privacy/',
     '/terms/'
   ];
+  const deskUrls = desks.map((desk) => `/desks/${deskSlug(desk)}/`);
   const authorUrls = authors.map((author) => `/authors/${author.slug}/`);
   const storyUrls = articles.map((article) => `/news/${article.slug}/`);
 
-  const entries = [...staticUrls, ...authorUrls, ...storyUrls]
+  const entries = [...staticUrls, ...deskUrls, ...authorUrls, ...storyUrls]
     .map((path) => {
       const article = articles.find((item) => `/news/${item.slug}/` === path);
       const lastmod = article?.updatedAt ?? article?.publishedAt;
