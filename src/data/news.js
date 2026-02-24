@@ -511,6 +511,36 @@ export const sourcePool = [
     title: 'Sora Release Notes: Expanded regional availability December 2025',
     url: 'https://help.openai.com/en/articles/12593142-sora-release-notes',
     tier: 'Tier 1'
+  },
+  {
+    title: 'Anthropic Blog: Detecting and Preventing Distillation Attacks',
+    url: 'https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'TechCrunch: Anthropic accuses Chinese AI labs of mining Claude',
+    url: 'https://techcrunch.com/2026/02/23/anthropic-accuses-chinese-ai-labs-of-mining-claude-as-us-debates-ai-chip-exports/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Bloomberg: Anthropic says DeepSeek, MiniMax distilled AI models',
+    url: 'https://www.bloomberg.com/news/articles/2026-02-23/anthropic-says-deepseek-minimax-distilled-ai-models-for-gains',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Decrypt: Critics mock Anthropic claims Chinese AI labs stealing data',
+    url: 'https://decrypt.co/358911/critics-mock-anthropics-claims-chinese-ai-labs-stealing-data',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'The Register: Anthropic misanthropic toward Chinese AI labs',
+    url: 'https://www.theregister.com/2026/02/24/anthropic_misanthropic_chinese_ai_labs/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'CNBC: Anthropic joins OpenAI flagging China distillation campaigns',
+    url: 'https://www.cnbc.com/2026/02/24/anthropic-openai-china-firms-distillation-deepseek.html',
+    tier: 'Tier 2'
   }
 ];
 
@@ -613,6 +643,41 @@ const imagePool = [
 ];
 
 const storySeeds = [
+  {
+    slug: 'anthropic-distillation-hypocrisy-memes',
+    title: 'Anthropic Cries Theft, the Internet Cries Hypocrisy: Inside the Meme War Over AI Distillation',
+    description: 'Anthropic accused three Chinese AI labs of running industrial-scale distillation campaigns against Claude. The internet responded with the kind of ruthless mockery usually reserved for politicians caught in their own scandals.',
+    publishedAt: '2026-02-24T19:00:00Z',
+    updatedAt: '2026-02-24T21:30:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'Analysis',
+    evidenceScore: 4,
+    riskScore: 4,
+    authorSlug: 'maya-chen',
+    tags: ['anthropic', 'distillation', 'deepseek', 'memes', 'policy-watch'],
+    sourceRefs: [84, 85, 86, 87, 88, 89],
+    hook: 'When the company built on scraped internet data accuses others of extracting its outputs, the irony writes itself.',
+    angle: 'The real story is not whether distillation happened but whether the industry can credibly draw lines it has spent years blurring.',
+    pulse: 'Watch for this framing to shape upcoming export-control debates and set precedent for how "legitimate training" gets legally defined.',
+    customBody: [
+      'On February 23, 2026, Anthropic published a blog post titled "Detecting and Preventing Distillation Attacks" accusing three Chinese AI companies \u2014 MiniMax, Moonshot AI, and DeepSeek \u2014 of running coordinated campaigns to extract Claude\'s capabilities through its API. The numbers were eye-catching: over 16 million exchanges through approximately 24,000 fraudulent accounts. MiniMax alone allegedly generated around 13 million exchanges; Moonshot AI contributed roughly 3.4 million; DeepSeek accounted for about 150,000. According to Anthropic, the campaigns specifically targeted Claude\'s most differentiated capabilities: agentic reasoning, tool use, coding, computer vision, and chain-of-thought reasoning.',
+      'Anthropic framed this as a national security threat, warning that distilled models lacking proper safety guardrails could enable cyberattacks, disinformation, and offensive operations by authoritarian governments. The company said it identified the campaigns through IP address correlation, request metadata analysis, and behavioral fingerprinting systems designed to catch coordinated activity. The timing was notable: the announcement landed while the U.S. government was actively debating stricter export controls on AI chips to China, and CEO Dario Amodei had been publicly advocating for exactly those controls.',
+      'The internet was not impressed. Within hours, social media had flipped the narrative from "Chinese labs caught stealing" to "company built on other people\'s data complains about people using its data." The backlash was immediate, coordinated, and savage.',
+      'The single most viral response came from Pliny the Liberator (@elder_plinius), who posted what became the defining joke of the entire controversy: "it\'s only Claude if it\'s distilled in the Silicon Valley region of California." The champagne appellation riff \u2014 you can only call it Champagne if it comes from the Champagne region of France \u2014 crystallized the absurdity in one sentence. The implication was clear: Anthropic was trying to claim geographic ownership over a technique the entire industry uses.',
+      'Teknium (@Teknium1) went for theatrical mock-outrage: "Ohhh nooo not my private IP, how dare someone use that to train an AI model, only Anthropic has the right to use everyone else\'s IP nooooo, this cannot stand!" The exaggerated tone became a copypasta format, with variations appearing across AI Twitter and Reddit for the rest of the weekend.',
+      'Elon Musk weighed in with characteristic bluntness: "Anthropic is guilty of stealing training data at massive scale and has had to pay multi-billion dollar settlements for their theft. This is just a fact." He shared X Community Notes pointing to Anthropic\'s $1.5 billion settlement over pirated books used to train Claude and a pending $3 billion suit from music publishers.',
+      'Tory Green, co-founder of IO.Net, articulated the structural critique: "You trained on the open internet and then call it \'distillation attacks\' when others learn from you. Labs that like to preach \'open research\' suddenly crying about open access." Stephen Pimentel noted the legal parallel directly: "It is deeply ironic for AI labs to object to others distilling their models via public APIs. Since that is closely analogous to how the models are pretrained from data sets that are often under copyright."',
+      'The most devastating piece of context was Reddit\'s own lawsuit against Anthropic, filed in June 2025, which accused Anthropic of scraping over 100,000 posts and comments to fine-tune Claude. Reddit\'s complaint included this memorable line: there is "the public face that attempts to ingratiate itself into the consumer\'s consciousness with claims of righteousness and respect for boundaries and the law, and the private face that ignores any rules that interfere with its attempts to further line its pockets." The exquisite irony \u2014 the company accused of scraping Reddit now complaining about being scraped \u2014 was not lost on anyone.',
+      'The meme ecosystem organized around a few recurring formats. The dominant template was a simple reframing: "Distillation when you do it. Training when we do it." Spider-Man-pointing-at-Spider-Man energy was everywhere \u2014 two identical entities accusing each other of the same thing. The Register leaned into it with a headline that became a meme itself: "Anthropic misanthropic toward China\'s AI labs," opening with "Having built a business by remixing content created by others, Anthropic worries that Chinese AI labs are stealing its data."',
+      'The "when I do it vs when they do it" format generated dozens of variations: "When I scrape the entire internet: innovative training methodology. When they query my API: industrial-scale distillation attack." Swapna Kumar Panda captured the viral sentiment in its simplest form: "When you guys train your model by bombarding others for free of cost, it\'s fine. But if others are training by paying your model, it\'s illegal? Unethical?"',
+      'David Shapiro summed up the prevailing mood with economy: "Pardon us if we don\'t feel much sympathy."',
+      'Anthropic is not the only company making these accusations. OpenAI sent a similar memo to the U.S. House Select Committee on China about ten days earlier, claiming DeepSeek had used distillation as part of "ongoing efforts to free-ride on the capabilities developed by OpenAI and other US frontier labs." Google disclosed that attackers used over 100,000 prompts to try to clone Gemini. The framing across all three companies was consistent: this is intellectual property theft with national security implications.',
+      'Defenders of Anthropic\'s position argue there is a meaningful distinction: large-scale, targeted API extraction to reverse-engineer specific capabilities like agentic reasoning and safety bypasses is qualitatively different from broad pretraining on internet data. Critics counter that this is a distinction without a meaningful difference \u2014 it is all using others\' intellectual output to build competing products. The legal system has not resolved this question, and the companies making the accusations are themselves defendants in lawsuits making essentially the same complaint in reverse.',
+      'The timing question matters. TechCrunch and others noted that Anthropic\'s announcement coincided precisely with U.S. debates on AI chip export controls. Anthropic is reportedly building a Super PAC to shape AI policy. Whether the distillation campaigns are real is one question; whether the announcement was timed for maximum political leverage is another.',
+      'For video generation teams and AI operators, the practical implications are real regardless of the hypocrisy debate. If distillation becomes a standard enforcement concern, expect tighter API rate limits, more aggressive behavioral fingerprinting, and terms-of-service changes that restrict how outputs can be used downstream. The era of treating API outputs as freely reusable training signal may be closing.',
+      'The internet has already delivered its verdict on the framing: the AI industry built itself on unrestricted data consumption and is now demanding restrictions when it is on the receiving end. Whether courts and regulators agree remains the open question. For now, the memes are writing themselves faster than anyone can distill them.'
+    ]
+  },
   {
     slug: 'sora-extensions-endless-cut',
     title: 'Sora Adds "Extensions" for Longer Scene Continuity',
@@ -2184,7 +2249,7 @@ export const articles = storySeeds.map((seed, index) => {
     authorUrl: `https://videogennews.com/authors/${author.slug}/`,
     canonical: `https://videogennews.com/news/${seed.slug}/`,
     keyPoints: buildKeyPoints(seed, reporting),
-    body: buildBody(seed, sources, index),
+    body: seed.customBody ?? buildBody(seed, sources, index),
     correctionNote: seed.correctionNote ?? null,
     image,
     sources
