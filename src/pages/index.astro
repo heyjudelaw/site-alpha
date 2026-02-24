@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { articles } from '../data/news.js';
+
+const sorted = articles.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+const lead = sorted[0];
+const secondary = sorted[1];
+const stack = sorted.slice(2, 6);
+const radar = sorted.slice(6, 12);
+const featureStories = sorted.slice(12, 16);
+const topStories = sorted.slice(16, 22);
+const latestHeadlines = sorted.slice(22);
+const latestPageSize = 5;
+const bestDocumented = sorted
+  .slice()
+  .sort((a, b) => {
+    const sourceDelta = b.sourceCount - a.sourceCount;
+    if (sourceDelta !== 0) return sourceDelta;
+    return b.evidenceScore - a.evidenceScore;
+  })
+  .slice(0, 5);
+const latestUpdate = new Date(sorted[0]?.updatedAt ?? sorted[0]?.date ?? Date.now()).toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC'
+});
+---
+
+<BaseLayout
+  title="AI Media Front Page"
+  description="Daily coverage of AI video, media systems, and platform policy."
+>
+  <section class="status-strip">
+    <p><strong>Live Desk:</strong> Updated through {latestUpdate} (UTC).</p>
+    <p>Read standards: <a href="/methodology/">Methodology</a> · <a href="/corrections/">Corrections log</a></p>
+  </section>
+
+  <section class="news-layout">
+    <div>
+      <section class="lead-cluster">
+        <div class="lead-column">
+          <article class="lead-story">
+            {lead.image?.src && (
+              <figure class="story-media">
+                <img src={lead.image.src} alt={lead.image.alt} loading="eager" decoding="async" />
+              </figure>
+            )}
+            <h1 class="banner-headline"><a href={`/news/${lead.slug}/`}>{lead.title}</a></h1>
+            <p class="byline-row">
+              by <a href={`/authors/${lead.authorSlug}/`}>{lead.author}</a> · {new Date(lead.publishedAt ?? lead.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}
+            </p>
+            <p>{lead.description}</p>
+            <p><span class="metric-pill">{lead.sourceCountLabel}</span> {lead.verificationLabel}</p>
+          </article>
+
+          {secondary && (
+            <article class="lead-story alt">
+              <h2 class="banner-headline alt"><a href={`/news/${secondary.slug}/`}>{secondary.title}</a></h2>
+              <p><span class="metric-pill">{secondary.sourceCountLabel}</span> {secondary.verificationLabel}</p>
+            </article>
+          )}
+        </div>
+
+        <aside class="micro-column">
+          {stack.map((item) => (
+            <article class="micro-item">
+              <h3><a href={`/news/${item.slug}/`}>{item.title}</a></h3>
+              <p class="byline-row">by <a href={`/authors/${item.authorSlug}/`}>{item.author}</a></p>
+              <p><span class="metric-pill">{item.sourceCountLabel}</span> {item.verificationLabel}</p>
+            </article>
+          ))}
+        </aside>
+      </section>
+
+      <section>
+        <h2 class="radar-heading"><span>On Our Radar</span></h2>
+        <div class="radar-grid">
+          {radar.map((item) => (
+            <article class="radar-item">
+              <h3><a href={`/news/${item.slug}/`}>{item.title}</a></h3>
+              <p><span class="metric-pill">{item.sourceCountLabel}</span> {item.contentType}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-headline">Top Stories</h2>
+        <div class="top-stories-grid">
+          <div>
+            {featureStories.map((item) => (
+              <article class="feature-story">
+                <h3><a href={`/news/${item.slug}/`}>{item.title}</a></h3>
+                <p class="byline-row">by <a href={`/authors/${item.authorSlug}/`}>{item.author}</a></p>
+                <p><span class="metric-pill">{item.sourceCountLabel}</span> {item.verificationLabel}</p>
+              </article>
+            ))}
+          </div>
+          <div class="quick-list">
+            {topStories.map((item) => (
+              <article class="quick-item">
+                <h4><a href={`/news/${item.slug}/`}>{item.title}</a></h4>
+                <p><span class="metric-pill">{item.sourceCountLabel}</span> {item.verificationLabel}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side-rail">
+      <section class="popular-panel">
+        <h2>Best Documented</h2>
+        <ol class="popular-list">
+          {bestDocumented.map((item) => (
+            <li>
+              <a href={`/news/${item.slug}/`}>{item.title}</a>
+              <p>{item.sourceCountLabel} · Evidence {item.evidenceScore}/5</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section class="scorecard">
+        <h2>Reporting Standards</h2>
+        <p>Named bylines on every story.</p>
+        <p>Publish and update timestamps are visible.</p>
+        <p>Material claims are source-backed.</p>
+        <p>Corrections are handled publicly and quickly.</p>
+        <p><a href="/editorial-policy/">Editorial Policy</a> · <a href="/methodology/">Methodology</a> · <a href="/corrections/">Corrections</a></p>
+      </section>
+    </aside>
+  </section>
+
+  <section class="headline-feed" data-headline-feed data-page-size={latestPageSize}>
+    <h2 class="section-headline">Latest Headlines</h2>
+    <p class="result-note">Showing <span data-page-range>1-{Math.min(latestPageSize, latestHeadlines.length)}</span> of {latestHeadlines.length} stories</p>
+    <div class="article-grid" data-page-container>
+      {latestHeadlines.map((item, index) => (
+        <div class="headline-page-item" data-page-item data-page={Math.floor(index / latestPageSize) + 1}>
+          <ArticleCard article={item} />
+        </div>
+      ))}
+    </div>
+    {latestHeadlines.length > latestPageSize && (
+      <nav class="pager headline-pager" data-page-nav aria-label="Latest headlines pages">
+        <button type="button" class="reset-btn pager-btn" data-page-prev>Prev</button>
+        <div class="page-number-list" data-page-numbers></div>
+        <button type="button" class="reset-btn pager-btn" data-page-next>Next</button>
+      </nav>
+    )}
+  </section>
+</BaseLayout>
+
+<script>
+  const feed = document.querySelector('[data-headline-feed]');
+
+  if (feed) {
+    const pageSize = Math.max(1, Number.parseInt(feed.dataset.pageSize ?? '5', 10) || 5);
+    const items = Array.from(feed.querySelectorAll('[data-page-item]'));
+    const pageRange = feed.querySelector('[data-page-range]');
+    const nav = feed.querySelector('[data-page-nav]');
+    const prevButton = feed.querySelector('[data-page-prev]');
+    const nextButton = feed.querySelector('[data-page-next]');
+    const numberList = feed.querySelector('[data-page-numbers]');
+    const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
+    let activePage = 1;
+
+    const buildPageTokens = (current, total) => {
+      if (total <= 5) return Array.from({ length: total }, (_, index) => index + 1);
+
+      let start = Math.max(2, current - 1);
+      let end = Math.min(total - 1, current + 1);
+
+      if (current <= 3) {
+        start = 2;
+        end = 4;
+      }
+
+      if (current >= total - 2) {
+        start = total - 3;
+        end = total - 1;
+      }
+
+      const tokens = [1];
+      if (start > 2) tokens.push('ellipsis-left');
+      for (let value = start; value <= end; value += 1) tokens.push(value);
+      if (end < total - 1) tokens.push('ellipsis-right');
+      tokens.push(total);
+      return tokens;
+    };
+
+    const renderControls = () => {
+      if (!numberList) return;
+      numberList.innerHTML = '';
+
+      buildPageTokens(activePage, totalPages).forEach((token) => {
+        if (typeof token === 'number') {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'page-number';
+          button.textContent = String(token);
+          if (token === activePage) button.setAttribute('aria-current', 'page');
+          button.addEventListener('click', () => {
+            activePage = token;
+            render();
+          });
+          numberList.append(button);
+          return;
+        }
+
+        const ellipsis = document.createElement('span');
+        ellipsis.className = 'page-ellipsis';
+        ellipsis.textContent = '...';
+        ellipsis.setAttribute('aria-hidden', 'true');
+        numberList.append(ellipsis);
+      });
+    };
+
+    const render = () => {
+      items.forEach((item, index) => {
+        const page = Math.floor(index / pageSize) + 1;
+        item.hidden = page !== activePage;
+      });
+
+      if (pageRange) {
+        const start = items.length === 0 ? 0 : (activePage - 1) * pageSize + 1;
+        const end = Math.min(activePage * pageSize, items.length);
+        pageRange.textContent = `${start}-${end}`;
+      }
+
+      if (prevButton) prevButton.disabled = activePage <= 1;
+      if (nextButton) nextButton.disabled = activePage >= totalPages;
+      renderControls();
+    };
+
+    if (prevButton) {
+      prevButton.addEventListener('click', () => {
+        if (activePage <= 1) return;
+        activePage -= 1;
+        render();
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener('click', () => {
+        if (activePage >= totalPages) return;
+        activePage += 1;
+        render();
+      });
+    }
+
+    if (nav) nav.hidden = totalPages <= 1;
+    render();
+  }
+</script>

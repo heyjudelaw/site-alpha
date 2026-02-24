@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NewsWorkbench from '../../components/NewsWorkbench.astro';
+---
+
+<BaseLayout
+  title="All Stories"
+  description="Latest VideoGenNews stories across investigations, policy, media systems, and methods."
+>
+  <section class="hero-panel compact">
+    <p class="hero-kicker">Latest coverage</p>
+    <h1>All Stories</h1>
+    <p>Browse every story currently published on VideoGenNews.</p>
+  </section>
+
+  <section>
+    <NewsWorkbench />
+  </section>
+</BaseLayout>

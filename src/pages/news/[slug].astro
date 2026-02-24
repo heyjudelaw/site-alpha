@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { articles } from '../../data/news.js';
+
+export function getStaticPaths() {
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+const { article } = Astro.props;
+const published = new Date(article.publishedAt ?? article.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC'
+});
+const updated = new Date(article.updatedAt ?? article.publishedAt ?? article.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC'
+});
+const wordCount = article.body.join(' ').split(/\s+/).filter(Boolean).length;
+const readMinutes = Math.max(2, Math.round(wordCount / 180));
+const related = articles
+  .filter((item) => item.slug !== article.slug)
+  .filter((item) => item.desk === article.desk || item.tags.some((tag) => article.tags.includes(tag)))
+  .slice(0, 4);
+---
+
+<BaseLayout
+  title={article.title}
+  description={article.description}
+  canonical={article.canonical}
+  type="article"
+  article={article}
+>
+  <article class="story-shell">
+    {article.image?.src && (
+      <figure class="story-media">
+        <img src={article.image.src} alt={article.image.alt} loading="eager" decoding="async" />
+      </figure>
+    )}
+    <h1>{article.title}</h1>
+    <p class="meta">
+      Published {published}
+      · Updated {updated}
+      · <a href={`/authors/${article.authorSlug}/`}>{article.author}</a>
+      · {readMinutes} min read
+    </p>
+
+    <div class="story-layout">
+      <section>
+        {article.body.map((line) => <p>{line}</p>)}
+
+        <h2>Key points</h2>
+        <ul>
+          {article.keyPoints.map((point) => <li>{point}</li>)}
+        </ul>
+
+        {article.sources?.length > 0 && (
+          <>
+            <h2>Sources</h2>
+            <ol class="source-list">
+              {article.sources.map((source) => (
+                <li>
+                  <a href={source.url}>{source.title}</a>
+                </li>
+              ))}
+            </ol>
+          </>
+        )}
+
+        {related.length > 0 && (
+          <>
+            <h2>Related coverage</h2>
+            <ul class="source-list">
+              {related.map((item) => (
+                <li>
+                  <a href={`/news/${item.slug}/`}>{item.title}</a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {article.correctionNote && (
+          <section class="correction-note">
+            <h2>Correction note</h2>
+            <p>{article.correctionNote}</p>
+          </section>
+        )}
+      </section>
+
+      <aside class="meta-panel">
+        <h3>Story info</h3>
+        <p><strong>Reporter:</strong> <a href={`/authors/${article.authorSlug}/`}>{article.author}</a></p>
+        <p><strong>Last verified:</strong> {updated}</p>
+        <a class="correction-button" href="/corrections/">Report a correction</a>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>

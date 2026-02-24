@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { authors, articles } from '../../data/news.js';
+
+const counts = authors.map((author) => ({
+  ...author,
+  stories: articles.filter((article) => article.authorSlug === author.slug).length
+}));
+const directory = counts
+  .slice()
+  .sort((a, b) => {
+    const storyDelta = b.stories - a.stories;
+    if (storyDelta !== 0) return storyDelta;
+    return a.name.localeCompare(b.name);
+  });
+---
+
+<BaseLayout
+  title="Authors"
+  description="VideoGenNews author profiles and story counts."
+>
+  <section class="hero-panel compact">
+    <p class="hero-kicker">Authors</p>
+    <h1>Author Directory</h1>
+    <p>Profiles for the reporting and editing team behind VideoGenNews coverage.</p>
+  </section>
+
+  <section class="article-grid">
+    {directory.map((author) => (
+      <article class="article-card">
+        <p class="chip">Author</p>
+        <h3><a href={`/authors/${author.slug}/`}>{author.name}</a></h3>
+        <p class="meta">{author.role}</p>
+        <p>{author.bio}</p>
+        <p><strong>Beat:</strong> {author.focus}</p>
+        <p><strong>Based in:</strong> {author.location}</p>
+        <p><strong>{author.stories}</strong> published stories</p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

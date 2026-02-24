@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="VideoGenNews logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10203a" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="72" fill="url(#bg)" />
+  <g fill="#f8fafc">
+    <path d="M92 124h74l88 264h-63l-19-62h-68l-19 62H30zm48 62-22 76h44z" />
+    <path d="M281 124h70l95 264h-63l-18-53h-77v53h-59V124zm59 62v94h49z" />
+  </g>
+  <circle cx="414" cy="98" r="34" fill="#38bdf8" />
+</svg>

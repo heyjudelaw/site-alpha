@@ -1,0 +1,31 @@
+---
+const { article } = Astro.props;
+const formattedDate = new Date(article.publishedAt ?? article.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC'
+});
+---
+
+<article
+  class="article-card"
+  data-article-card
+  data-desk={article.desk}
+  data-evidence={article.evidenceScore}
+  data-risk={article.riskScore}
+  data-sources={article.sourceCount}
+  data-date={article.date}
+>
+  {article.image?.src && (
+    <figure class="story-media">
+      <img src={article.image.src} alt={article.image.alt} loading="lazy" decoding="async" />
+    </figure>
+  )}
+  <h3><a href={`/news/${article.slug}/`}>{article.title}</a></h3>
+  <p class="byline-row">
+    by <a href={`/authors/${article.authorSlug}/`}>{article.author}</a>
+  </p>
+  <p class="meta">{formattedDate}</p>
+  <p>{article.description}</p>
+</article>

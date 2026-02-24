@@ -1,0 +1,219 @@
+---
+import '../styles/global.css';
+import { articles } from '../data/news.js';
+
+const {
+  title,
+  description = 'Daily coverage of AI video, media systems, and platform policy.',
+  canonical,
+  type = 'website',
+  article,
+  extraSchemas = []
+} = Astro.props;
+
+const siteName = 'VideoGenNews';
+const siteUrl = 'https://videogennews.com';
+const siteLogoUrl = `${siteUrl}/logo.svg`;
+const defaultSocialImage = `${siteUrl}/og-default.jpg`;
+const socialImageWidth = 1200;
+const socialImageHeight = 630;
+const rssUrl = `${siteUrl}/rss.xml`;
+const nowMs = Date.now();
+const pageUrl = canonical ?? new URL(Astro.url.pathname, 'https://videogennews.com').toString();
+const fullTitle = `${title} | ${siteName}`;
+const ordered = articles.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+const deskSlug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const ageLabel = (value) => {
+  const delta = Math.floor((nowMs - Date.parse(value)) / 60000);
+  if (delta < 0) {
+    const until = Math.max(1, Math.abs(delta));
+    if (until < 60) return `in ${until}m`;
+    if (until < 1440) return `in ${Math.floor(until / 60)}h`;
+    return `in ${Math.floor(until / 1440)}d`;
+  }
+  const minutes = Math.max(1, delta);
+  if (minutes < 60) return `${minutes}m`;
+  if (minutes < 1440) return `${Math.floor(minutes / 60)}h`;
+  return `${Math.floor(minutes / 1440)}d`;
+};
+const headlineRail = [...new Set(ordered.map((item) => item.desk))].slice(0, 6);
+const flashCards = ordered.filter((item) => Date.parse(item.publishedAt ?? item.date) <= nowMs).slice(0, 4);
+const publishedAt = article?.publishedAt ?? article?.date;
+const updatedAt = article?.updatedAt ?? publishedAt;
+const authorName = article?.author ?? 'VideoGenNews Desk';
+const authorUrl = article?.authorSlug ? `${siteUrl}/authors/${article.authorSlug}/` : article?.authorUrl;
+const normalizeSocialImage = (imageSrc) => {
+  if (!imageSrc) return defaultSocialImage;
+  try {
+    const imageUrl = new URL(imageSrc, siteUrl);
+    if (imageUrl.hostname === 'images.unsplash.com') {
+      imageUrl.searchParams.set('auto', 'format');
+      imageUrl.searchParams.set('fit', 'crop');
+      imageUrl.searchParams.set('w', String(socialImageWidth));
+      imageUrl.searchParams.set('h', String(socialImageHeight));
+      imageUrl.searchParams.set('q', '82');
+      imageUrl.searchParams.set('fm', 'jpg');
+    }
+    return imageUrl.toString();
+  } catch {
+    return defaultSocialImage;
+  }
+};
+const socialImage = normalizeSocialImage(article?.image?.src);
+const socialImageAlt = article?.image?.alt ?? `${siteName} social card`;
+const socialImageType = socialImage.includes('images.unsplash.com') || socialImage.endsWith('.jpg') || socialImage.endsWith('.jpeg')
+  ? 'image/jpeg'
+  : socialImage.endsWith('.png')
+    ? 'image/png'
+    : 'image/jpeg';
+const organizationSchema = {
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: siteName,
+  url: siteUrl,
+  logo: {
+    '@type': 'ImageObject',
+    url: siteLogoUrl
+  }
+};
+const websiteSchema = {
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  name: siteName,
+  url: siteUrl,
+  description: 'Source-linked reporting on AI video models, workflows, and policy.',
+  publisher: {
+    '@id': `${siteUrl}/#organization`
+  }
+};
+const webpageSchema = {
+  '@type': 'WebPage',
+  '@id': `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: title,
+  description,
+  isPartOf: {
+    '@id': `${siteUrl}/#website`
+  }
+};
+const articleSchema = article
+  ? {
+      '@type': 'NewsArticle',
+      '@id': `${pageUrl}#newsarticle`,
+      url: pageUrl,
+      headline: title,
+      description,
+      image: [socialImage],
+      datePublished: publishedAt,
+      dateModified: updatedAt,
+      articleSection: article?.desk,
+      genre: article?.contentType,
+      inLanguage: 'en-US',
+      isAccessibleForFree: true,
+      author: authorUrl
+        ? {
+            '@type': 'Person',
+            name: authorName,
+            url: authorUrl
+          }
+        : {
+            '@type': 'Person',
+            name: authorName
+          },
+      publisher: {
+        '@id': `${siteUrl}/#organization`
+      },
+      mainEntityOfPage: {
+        '@id': `${pageUrl}#webpage`
+      }
+    }
+  : null;
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [organizationSchema, websiteSchema, webpageSchema, articleSchema, ...extraSchemas].filter(Boolean)
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={pageUrl} />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="alternate" type="application/rss+xml" title={`${siteName} RSS Feed`} href={rssUrl} />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:secure_url" content={socialImage} />
+    <meta property="og:image:type" content={socialImageType} />
+    <meta property="og:image:width" content={socialImageWidth} />
+    <meta property="og:image:height" content={socialImageHeight} />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
+    <meta name="author" content={authorName} />
+    {article && <meta property="article:published_time" content={publishedAt} />}
+    {article && <meta property="article:modified_time" content={updatedAt} />}
+    {article && <meta property="article:author" content={authorName} />}
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <header class="shell-header">
+      <div class="utility-nav">
+        <a class="menu-button" href="/">Menu</a>
+        <a href="/desks/model-wire/">Model Wire</a>
+        <a href="/desks/workflow-lab/">Workflow</a>
+        <a href="/desks/benchmark-lab/">Benchmark</a>
+        <a href="/desks/policy-ip-watch/">Policy/IP</a>
+        <a href="/desks/distribution-intelligence/">Distribution</a>
+        <a href="/desks/toolchain-desk/">Toolchain</a>
+        <a href="/news/">All Stories</a>
+        <a href="/about/">About</a>
+        <a href="/masthead/">Masthead</a>
+        <a href="/contact/">Contact</a>
+        <a href="/corrections/">Corrections</a>
+        <a class="subscribe-pill" href="/newsletter/#signup">Newsletter</a>
+      </div>
+      <div class="mission-strip">
+        <p>Source-linked reporting on AI video models, workflows, and policy.</p>
+        <a href="/newsletter/#signup">Get Email Briefing</a>
+      </div>
+      <div class="logo-row">
+        <a class="site-logo" href="/"><span class="logo-mark">V</span> {siteName}</a>
+      </div>
+      <div class="trending-row">
+        <span class="trending-label">Trending:</span>
+        <div class="trending-links">
+          {headlineRail.map((desk) => <a href={`/desks/${deskSlug(desk)}/`}>{desk}</a>)}
+        </div>
+      </div>
+      <div class="flash-cards">
+        {flashCards.map((item) => (
+          <a class="flash-card" href={`/news/${item.slug}/`}>
+            <span class="flash-time">{ageLabel(item.publishedAt ?? item.date)}</span>
+            <span class="flash-title">{item.title}</span>
+          </a>
+        ))}
+      </div>
+    </header>
+    <main class="shell-main">
+      <slot />
+    </main>
+    <footer class="shell-footer">
+      <p>&copy; 2026 VideoGenNews · videogennews.com</p>
+      <p class="footer-links">
+        <a href="/about/">About</a> · <a href="/masthead/">Masthead</a> · <a href="/contact/">Contact</a> · <a href="/authors/">Authors</a> · <a href="/editorial-policy/">Editorial Policy</a> · <a href="/methodology/">Methodology</a> · <a href="/corrections/">Corrections</a> · <a href="/newsletter/#signup">Newsletter</a> · <a href="/advertising-disclosure/">Advertising Disclosure</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
+      </p>
+    </footer>
+  </body>
+</html>

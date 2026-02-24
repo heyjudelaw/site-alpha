@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { articles } from '../data/news.js';
+
+const corrections = articles
+  .filter((article) => article.correctionNote)
+  .sort((a, b) => Date.parse(b.updatedAt ?? b.publishedAt ?? b.date) - Date.parse(a.updatedAt ?? a.publishedAt ?? a.date));
+---
+
+<BaseLayout
+  title="Corrections Policy"
+  description="How VideoGenNews handles and publishes corrections."
+>
+  <section class="hero-panel compact">
+    <p class="hero-kicker">Corrections</p>
+    <h1>Corrections Policy</h1>
+    <p>Accuracy is a requirement. When errors are confirmed, we correct them quickly and visibly.</p>
+  </section>
+
+  <section class="story-shell">
+    <h2>How to request a correction</h2>
+    <ol>
+      <li>Email <a href="mailto:corrections@videogennews.com">corrections@videogennews.com</a>.</li>
+      <li>Include the page URL and the specific line/claim in question.</li>
+      <li>Attach supporting evidence or a source link.</li>
+    </ol>
+
+    <h2>Correction workflow</h2>
+    <ul>
+      <li>Requests are reviewed by an editor.</li>
+      <li>If a correction is needed, story copy is updated and a correction note is appended.</li>
+      <li>Material updates are reflected in the page "Updated" timestamp.</li>
+    </ul>
+
+    <h2>Published corrections</h2>
+    {corrections.length > 0 ? (
+      <ul>
+        {corrections.map((article) => (
+          <li>
+            <a href={`/news/${article.slug}/`}>{article.title}</a>
+            {' '}
+            ({new Date(article.updatedAt ?? article.publishedAt ?? article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })})
+            {article.correctionNote ? `: ${article.correctionNote}` : ''}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>No published corrections yet. When corrections are issued, this log is updated with timestamps.</p>
+    )}
+  </section>
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { authors, articles } from '../data/news.js';
+
+const team = authors.map((author) => ({
+  ...author,
+  stories: articles.filter((article) => article.authorSlug === author.slug).length
+}));
+---
+
+<BaseLayout
+  title="Masthead"
+  description="Editorial leadership, desk coverage, and contact points for VideoGenNews."
+>
+  <section class="hero-panel compact">
+    <p class="hero-kicker">Masthead</p>
+    <h1>Editorial Team</h1>
+    <p>Desk ownership and direct contact points for coverage questions, sourcing feedback, and corrections.</p>
+  </section>
+
+  <section class="article-grid">
+    {team.map((author) => (
+      <article class="article-card">
+        <p class="chip">Desk</p>
+        <h3><a href={`/authors/${author.slug}/`}>{author.name}</a></h3>
+        <p class="meta">{author.role}</p>
+        <p><strong>Beat:</strong> {author.focus}</p>
+        <p>{author.bio}</p>
+        <p><strong>Based in:</strong> {author.location}</p>
+        <p><strong>Background:</strong> {author.experience}</p>
+        <p><strong>{author.stories}</strong> active bylines</p>
+        <p><a href={`mailto:${author.email}`}>{author.email}</a></p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

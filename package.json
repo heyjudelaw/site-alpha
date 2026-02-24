@@ -1,0 +1,15 @@
+{
+  "name": "astro-news-demo",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check:social": "node scripts/check-social-meta.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}

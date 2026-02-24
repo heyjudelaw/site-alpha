@@ -1,0 +1,28 @@
+---
+const { articles } = Astro.props;
+const points = articles
+  .slice()
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .slice(0, 12)
+  .map((article) => ({
+    label: article.title.length > 56 ? `${article.title.slice(0, 56)}...` : article.title,
+    risk: article.riskScore,
+    evidence: article.evidenceScore
+  }));
+---
+
+<section class="pulse-panel">
+  <h2>Signal Pulse</h2>
+  <p>Recent 12 stories: each column pairs risk and evidence.</p>
+  <div class="pulse-grid">
+    {points.map((point) => (
+      <div class="pulse-item">
+        <div class="bars" role="img" aria-label={`Risk ${point.risk}, evidence ${point.evidence}`}>
+          <span class="bar bar-risk" style={`height:${point.risk * 14 + 8}px`}></span>
+          <span class="bar bar-evidence" style={`height:${point.evidence * 14 + 8}px`}></span>
+        </div>
+        <p>{point.label}</p>
+      </div>
+    ))}
+  </div>
+</section>

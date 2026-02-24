@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://videogennews.com/sitemap-index.xml
+Sitemap: https://videogennews.com/news-sitemap.xml

@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { authors, articles } from '../../data/news.js';
+
+export function getStaticPaths() {
+  return authors.map((author) => ({
+    params: { slug: author.slug },
+    props: { author }
+  }));
+}
+
+const { author } = Astro.props;
+const authored = articles
+  .filter((article) => article.authorSlug === author.slug)
+  .sort((a, b) => Date.parse(b.publishedAt ?? b.date) - Date.parse(a.publishedAt ?? a.date));
+const siteUrl = 'https://videogennews.com';
+const authorPageUrl = `${siteUrl}/authors/${author.slug}/`;
+const personId = `${authorPageUrl}#person`;
+const extraSchemas = [
+  {
+    '@type': 'Person',
+    '@id': personId,
+    name: author.name,
+    url: authorPageUrl,
+    description: author.bio,
+    jobTitle: author.role,
+    email: `mailto:${author.email}`,
+    worksFor: {
+      '@id': `${siteUrl}/#organization`
+    }
+  },
+  {
+    '@type': 'ProfilePage',
+    '@id': `${authorPageUrl}#profile`,
+    url: authorPageUrl,
+    name: `${author.name} | Author`,
+    description: `Profile and published stories for ${author.name}.`,
+    mainEntity: {
+      '@id': personId
+    },
+    isPartOf: {
+      '@id': `${siteUrl}/#website`
+    }
+  }
+];
+---
+
+<BaseLayout
+  title={`${author.name} | Author`}
+  description={`Profile and published stories for ${author.name}.`}
+  canonical={authorPageUrl}
+  extraSchemas={extraSchemas}
+>
+  <section class="hero-panel compact">
+    <p class="hero-kicker">Author</p>
+    <h1>{author.name}</h1>
+    <p>{author.role}</p>
+    <p>{author.bio}</p>
+  </section>
+
+  <section class="story-shell">
+    <h2>Profile</h2>
+    <ul class="source-list">
+      <li><strong>Beat:</strong> {author.focus}</li>
+      <li><strong>Based in:</strong> {author.location}</li>
+      <li><strong>Background:</strong> {author.experience}</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p><a href={`mailto:${author.email}`}>{author.email}</a></p>
+
+    <h2>Stories by {author.name}</h2>
+    {authored.length > 0 ? (
+      <ul>
+        {authored.map((article) => (
+          <li>
+            <a href={`/news/${article.slug}/`}>{article.title}</a> ({new Date(article.publishedAt ?? article.date).toLocaleDateString('en-US')})
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>No bylined stories published yet.</p>
+    )}
+  </section>
+</BaseLayout>

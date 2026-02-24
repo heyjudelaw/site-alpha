@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Methodology"
+  description="How VideoGenNews structures source selection, evidence scoring, and story updates."
+>
+  <section class="hero-panel compact">
+    <p class="hero-kicker">Methodology</p>
+    <h1>How We Build Coverage</h1>
+    <p>This page explains sourcing, evidence labels, and update rules used across story files.</p>
+  </section>
+
+  <section class="story-shell">
+    <h2>Source selection</h2>
+    <ul>
+      <li>Primary references are official release notes, product documentation, and on-record announcements.</li>
+      <li>Secondary references add context (industry reporting, analysis, or policy coverage).</li>
+      <li>Lower-tier ecosystem signals are used as directional context and never as standalone proof for hard claims.</li>
+    </ul>
+
+    <h2>Source-basis labels</h2>
+    <ul>
+      <li><strong>Multiple primary sources:</strong> two or more primary references.</li>
+      <li><strong>Primary + supporting sources:</strong> one primary reference plus additional supporting context.</li>
+      <li><strong>Single primary source:</strong> one primary reference and no additional source depth.</li>
+      <li><strong>Supporting-source mix:</strong> multiple non-primary references.</li>
+      <li><strong>Single supporting source:</strong> one non-primary reference only.</li>
+    </ul>
+
+    <h2>Evidence and risk scores</h2>
+    <p>Evidence and risk scores are editorial heuristics used to prioritize follow-up reporting. They are not scientific certainty ratings and may change as new information arrives.</p>
+
+    <h2>Update and correction policy</h2>
+    <ul>
+      <li>Material factual changes trigger timestamped updates.</li>
+      <li>Confirmed errors trigger correction notes on article pages and entries on the <a href="/corrections/">corrections log</a>.</li>
+      <li>Source lists are preserved so readers can inspect provenance directly.</li>
+    </ul>
+  </section>
+</BaseLayout>

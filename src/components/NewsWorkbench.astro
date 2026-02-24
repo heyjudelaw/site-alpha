@@ -1,0 +1,83 @@
+---
+import ArticleCard from './ArticleCard.astro';
+import { articles, desks } from '../data/news.js';
+
+const sorted = articles.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+---
+
+<section class="workbench">
+  <div class="control-panel">
+    <h2>Browse Coverage</h2>
+    <p>Filter by desk and sort by latest updates or source depth.</p>
+    <div class="controls">
+      <label>
+        Desk
+        <select data-control="desk">
+          <option value="all">All desks</option>
+          {desks.map((desk) => <option value={desk}>{desk}</option>)}
+        </select>
+      </label>
+      <label>
+        Sort by
+        <select data-control="sort">
+          <option value="latest">Latest date</option>
+          <option value="sourced">Most sourced</option>
+        </select>
+      </label>
+      <button type="button" class="reset-btn" data-control="reset">Reset</button>
+    </div>
+    <p class="result-note">Showing <span data-result-count>{sorted.length}</span> stories</p>
+  </div>
+
+  <div class="article-grid" data-card-container>
+    {sorted.map((article) => <ArticleCard article={article} />)}
+  </div>
+</section>
+
+<script>
+  const root = document.currentScript?.previousElementSibling;
+  if (root && root.classList.contains('workbench')) {
+    const deskSelect = root.querySelector('[data-control="desk"]');
+    const sortSelect = root.querySelector('[data-control="sort"]');
+    const resetButton = root.querySelector('[data-control="reset"]');
+    const countNode = root.querySelector('[data-result-count]');
+    const container = root.querySelector('[data-card-container]');
+
+    const getCards = () => Array.from(root.querySelectorAll('[data-article-card]'));
+
+    const applyView = () => {
+      const desk = deskSelect.value;
+      const mode = sortSelect.value;
+      const cards = getCards();
+
+      cards.forEach((card) => {
+        const cardDesk = card.dataset.desk;
+        const deskMatch = desk === 'all' || cardDesk === desk;
+        card.hidden = !deskMatch;
+      });
+
+      const visible = cards.filter((card) => !card.hidden);
+      visible.sort((a, b) => {
+        if (mode === 'sourced') {
+          const sourceDelta = Number(b.dataset.sources) - Number(a.dataset.sources);
+          if (sourceDelta !== 0) return sourceDelta;
+          return Number(b.dataset.evidence) - Number(a.dataset.evidence);
+        }
+        return Date.parse(b.dataset.date) - Date.parse(a.dataset.date);
+      });
+
+      visible.forEach((card) => container.append(card));
+      countNode.textContent = String(visible.length);
+    };
+
+    const reset = () => {
+      deskSelect.value = 'all';
+      sortSelect.value = 'latest';
+      applyView();
+    };
+
+    [deskSelect, sortSelect].forEach((node) => node.addEventListener('input', applyView));
+    resetButton.addEventListener('click', reset);
+    applyView();
+  }
+</script>

@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const subscribeSubject = 'VideoGenNews Briefing Subscribe';
+const subscribeBody = [
+  'Please subscribe me to the VideoGenNews email briefing.',
+  '',
+  'Name:',
+  'Work email:',
+  'Organization:',
+  'Primary coverage interests:'
+].join('\n');
+const subscribeMailto = `mailto:newsletter@videogennews.com?subject=${encodeURIComponent(subscribeSubject)}&body=${encodeURIComponent(subscribeBody)}`;
+---
+
+<BaseLayout
+  title="Newsletter"
+  description="Subscribe to the VideoGenNews email briefing."
+>
+  <section class="hero-panel compact">
+    <p class="hero-kicker">Newsletter</p>
+    <h1>VideoGenNews Briefing</h1>
+    <p>A concise roundup of model launches, workflow shifts, and policy developments from across the desk network.</p>
+    <p><strong>Delivery:</strong> Weekdays at 7:30 a.m. ET.</p>
+  </section>
+
+  <section class="story-shell" id="signup">
+    <h2>What you get</h2>
+    <ul>
+      <li>Daily top-line summary of new coverage.</li>
+      <li>Most-cited stories and source-linked updates.</li>
+      <li>Watchlist changes across policy, tooling, and distribution.</li>
+    </ul>
+
+    <h2>Subscribe</h2>
+    <p>Use this form to open a prefilled subscription draft in your default email client.</p>
+    <form class="newsletter-form" action="mailto:newsletter@videogennews.com" method="post" enctype="text/plain">
+      <label for="newsletter-name">Name</label>
+      <input id="newsletter-name" name="name" type="text" required />
+
+      <label for="newsletter-email">Work Email</label>
+      <input id="newsletter-email" name="work_email" type="email" required />
+
+      <label for="newsletter-org">Organization</label>
+      <input id="newsletter-org" name="organization" type="text" />
+
+      <label for="newsletter-interests">Coverage Interests</label>
+      <textarea id="newsletter-interests" name="coverage_interests" rows="4" placeholder="Model launches, workflow optimization, policy/IP..." />
+
+      <button class="correction-button" type="submit">Open Draft Email</button>
+    </form>
+    <p>If the form does not trigger your email app, use the direct signup link: <a href={subscribeMailto}>Compose subscription email</a>.</p>
+    <p>Manual option: email <a href="mailto:newsletter@videogennews.com">newsletter@videogennews.com</a> with subject <strong>VideoGenNews Briefing Subscribe</strong>.</p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { articles, desks } from '../../data/news.js';
+
+export function getStaticPaths() {
+  return desks.map((desk) => ({
+    params: { slug: desk.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') },
+    props: { desk }
+  }));
+}
+
+const { desk } = Astro.props;
+const filtered = articles
+  .filter((article) => article.desk === desk)
+  .slice()
+  .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+const latest = filtered[0];
+const latestDate = latest
+  ? new Date(latest.updatedAt ?? latest.date).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      timeZone: 'UTC'
+    })
+  : null;
+const deskPath = `/desks/${desk.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}/`;
+---
+
+<BaseLayout
+  title={`${desk} Desk`}
+  description={`Latest ${desk} coverage on VideoGenNews.`}
+  canonical={`https://videogennews.com${deskPath}`}
+>
+  <section class="hero-panel compact">
+    <p class="hero-kicker">Desk coverage</p>
+    <h1>{desk}</h1>
+    <p>
+      {filtered.length} stories in this desk
+      {latestDate ? ` · last updated ${latestDate}` : ''}.
+    </p>
+  </section>
+
+  <section class="article-grid">
+    {filtered.map((article) => <ArticleCard article={article} />)}
+  </section>
+</BaseLayout>
