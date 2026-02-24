@@ -8,7 +8,8 @@ const {
   canonical,
   type = 'website',
   article,
-  extraSchemas = []
+  extraSchemas = [],
+  breadcrumbs = []
 } = Astro.props;
 
 const siteName = 'VideoGenNews';
@@ -82,8 +83,17 @@ const websiteSchema = {
   name: siteName,
   url: siteUrl,
   description: 'Source-linked reporting on AI video models, workflows, and policy.',
+  inLanguage: 'en-US',
   publisher: {
     '@id': `${siteUrl}/#organization`
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteUrl}/news/?q={search_term_string}`
+    },
+    'query-input': 'required name=search_term_string'
   }
 };
 const webpageSchema = {
@@ -125,12 +135,31 @@ const articleSchema = article
       },
       mainEntityOfPage: {
         '@id': `${pageUrl}#webpage`
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.story-shell > h1', '.story-shell > .meta', '.story-shell .story-layout > section > p']
       }
+    }
+  : null;
+const breadcrumbSchema = breadcrumbs.length > 0
+  ? {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+        ...breadcrumbs.map((crumb, i) => ({
+          '@type': 'ListItem',
+          position: i + 2,
+          name: crumb.name,
+          ...(crumb.url ? { item: new URL(crumb.url, siteUrl).toString() } : {})
+        }))
+      ]
     }
   : null;
 const schema = {
   '@context': 'https://schema.org',
-  '@graph': [organizationSchema, websiteSchema, webpageSchema, articleSchema, ...extraSchemas].filter(Boolean)
+  '@graph': [organizationSchema, websiteSchema, webpageSchema, articleSchema, breadcrumbSchema, ...extraSchemas].filter(Boolean)
 };
 ---
 
@@ -139,6 +168,10 @@ const schema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/logo.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#111111" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={pageUrl} />
@@ -207,6 +240,18 @@ const schema = {
       </div>
     </header>
     <main class="shell-main">
+      {breadcrumbs.length > 0 && (
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li><a href="/">Home</a></li>
+            {breadcrumbs.map((crumb, i) =>
+              crumb.url
+                ? <li><a href={crumb.url}>{crumb.name}</a></li>
+                : <li aria-current="page">{crumb.name}</li>
+            )}
+          </ol>
+        </nav>
+      )}
       <slot />
     </main>
     <footer class="shell-footer">

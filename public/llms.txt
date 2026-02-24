@@ -1,0 +1,40 @@
+# VideoGenNews
+
+> Source-linked reporting on AI video models, workflows, and policy.
+
+VideoGenNews is a specialist news publication covering AI video tools, model behavior, creator workflows, and platform policy. Every story includes named bylines, visible publish/update timestamps, and linked sources with tier labels.
+
+## Key Sections
+
+- [All Stories](https://videogennews.com/news/): Full archive of published coverage.
+- [Model Wire](https://videogennews.com/desks/model-wire/): Model launches, capability updates, and release-note verification.
+- [Workflow Lab](https://videogennews.com/desks/workflow-lab/): Creator pipelines, post-production systems, and throughput analysis.
+- [Benchmark Lab](https://videogennews.com/desks/benchmark-lab/): Benchmark design, reproducibility checks, and evaluation caveats.
+- [Policy/IP Watch](https://videogennews.com/desks/policy-ip-watch/): Rights risk, provenance, and regulatory developments.
+- [Distribution Intelligence](https://videogennews.com/desks/distribution-intelligence/): Recommendation systems, audience retention, and platform shifts.
+- [Toolchain Desk](https://videogennews.com/desks/toolchain-desk/): API integrations, editing stacks, and deployment reliability.
+
+## Editorial Standards
+
+- [Methodology](https://videogennews.com/methodology/): Source selection, evidence scoring, and update rules.
+- [Editorial Policy](https://videogennews.com/editorial-policy/): Newsroom standards and content-type labeling.
+- [Corrections](https://videogennews.com/corrections/): Public correction log with timestamps.
+- [About](https://videogennews.com/about/): Mission, ownership, and funding transparency.
+- [Masthead](https://videogennews.com/masthead/): Staff listing and desk assignments.
+
+## Authors
+
+- [Nora Ellis](https://videogennews.com/authors/nora-ellis/): Executive Editor, Model Wire.
+- [Liam Ortega](https://videogennews.com/authors/liam-ortega/): Senior Reporter, Workflow Lab.
+- [Maya Chen](https://videogennews.com/authors/maya-chen/): Managing Editor, Verification & Policy.
+- [Devin Brooks](https://videogennews.com/authors/devin-brooks/): Reporter, Benchmark Lab.
+- [Sofia Rao](https://videogennews.com/authors/sofia-rao/): Reporter, Research-to-Product.
+- [Ethan Morales](https://videogennews.com/authors/ethan-morales/): Reporter, Toolchain Desk.
+- [Iris Kim](https://videogennews.com/authors/iris-kim/): Reporter, Distribution Intelligence.
+- [Zoe Hart](https://videogennews.com/authors/zoe-hart/): Reporter, Trend Radar.
+
+## Feeds
+
+- [RSS Feed](https://videogennews.com/rss.xml)
+- [Sitemap](https://videogennews.com/sitemap-index.xml)
+- [News Sitemap](https://videogennews.com/news-sitemap.xml)

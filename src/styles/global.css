@@ -916,6 +916,40 @@ select {
   font-size: 0.7rem;
 }
 
+.breadcrumb-nav {
+  font: 700 0.7rem/1.2 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.breadcrumb-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+}
+
+.breadcrumb-list li::after {
+  content: "\203A";
+  margin-left: 0.35rem;
+  color: var(--line);
+}
+
+.breadcrumb-list li:last-child::after {
+  content: none;
+}
+
+.breadcrumb-list a {
+  color: var(--link-meta);
+}
+
+.breadcrumb-list [aria-current="page"] {
+  color: var(--ink-soft);
+}
+
 @media (max-width: 960px) {
   .flash-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));

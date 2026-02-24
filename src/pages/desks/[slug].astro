@@ -31,6 +31,10 @@ const deskPath = `/desks/${desk.toLowerCase().replace(/[^a-z0-9]+/g, '-').replac
   title={`${desk} Desk`}
   description={`Latest ${desk} coverage on VideoGenNews.`}
   canonical={`https://videogennews.com${deskPath}`}
+  breadcrumbs={[
+    { name: 'News', url: '/news/' },
+    { name: desk }
+  ]}
 >
   <section class="hero-panel compact">
     <p class="hero-kicker">Desk coverage</p>

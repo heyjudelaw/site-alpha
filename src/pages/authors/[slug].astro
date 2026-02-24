@@ -50,6 +50,10 @@ const extraSchemas = [
   description={`Profile and published stories for ${author.name}.`}
   canonical={authorPageUrl}
   extraSchemas={extraSchemas}
+  breadcrumbs={[
+    { name: 'Authors', url: '/authors/' },
+    { name: author.name }
+  ]}
 >
   <section class="hero-panel compact">
     <p class="hero-kicker">Author</p>

@@ -10,13 +10,17 @@ export function getStaticPaths() {
 }
 
 const { article } = Astro.props;
-const published = new Date(article.publishedAt ?? article.date).toLocaleDateString('en-US', {
+const publishedRaw = article.publishedAt ?? article.date;
+const updatedRaw = article.updatedAt ?? article.publishedAt ?? article.date;
+const publishedIso = new Date(publishedRaw).toISOString();
+const updatedIso = new Date(updatedRaw).toISOString();
+const published = new Date(publishedRaw).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'short',
   day: 'numeric',
   timeZone: 'UTC'
 });
-const updated = new Date(article.updatedAt ?? article.publishedAt ?? article.date).toLocaleDateString('en-US', {
+const updated = new Date(updatedRaw).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'short',
   day: 'numeric',
@@ -36,17 +40,22 @@ const related = articles
   canonical={article.canonical}
   type="article"
   article={article}
+  breadcrumbs={[
+    { name: 'News', url: '/news/' },
+    { name: article.desk, url: `/desks/${article.desk.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}/` },
+    { name: article.title }
+  ]}
 >
   <article class="story-shell">
     {article.image?.src && (
       <figure class="story-media">
-        <img src={article.image.src} alt={article.image.alt} loading="eager" decoding="async" />
+        <img src={article.image.src} alt={article.image.alt} width="1600" height="900" loading="eager" decoding="async" fetchpriority="high" />
       </figure>
     )}
     <h1>{article.title}</h1>
     <p class="meta">
-      Published {published}
-      · Updated {updated}
+      Published <time datetime={publishedIso}>{published}</time>
+      · Updated <time datetime={updatedIso}>{updated}</time>
       · <a href={`/authors/${article.authorSlug}/`}>{article.author}</a>
       · {readMinutes} min read
     </p>
@@ -66,7 +75,7 @@ const related = articles
             <ol class="source-list">
               {article.sources.map((source) => (
                 <li>
-                  <a href={source.url}>{source.title}</a>
+                  <a href={source.url} target="_blank" rel="noopener">{source.title}</a>
                 </li>
               ))}
             </ol>

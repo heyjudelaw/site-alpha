@@ -1,0 +1,16 @@
+{
+  "name": "VideoGenNews",
+  "short_name": "VGN",
+  "description": "Source-linked reporting on AI video models, workflows, and policy.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f5f4f2",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
