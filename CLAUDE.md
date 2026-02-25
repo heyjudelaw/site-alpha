@@ -83,17 +83,52 @@ node -e 'import("./src/data/news.js").then(m => { console.log("articles:", m.art
 npx astro build
 ```
 
+## Helper scripts
+
+These CLI tools live in `scripts/` and make article management faster:
+
+```bash
+# Validate data integrity (run before committing)
+node scripts/validate-data.mjs
+
+# Search existing articles by keyword, tag, desk, or date range
+node scripts/find-articles.mjs seedance
+node scripts/find-articles.mjs --tag openai
+node scripts/find-articles.mjs --desk "Policy/IP Watch"
+node scripts/find-articles.mjs --after 2026-02-01
+
+# Search sources by keyword (returns indices for sourceRefs)
+node scripts/find-source.mjs "techcrunch"
+node scripts/find-source.mjs "bloomberg"
+
+# Regenerate ARTICLE-INDEX.md after adding articles
+node scripts/generate-index.mjs
+```
+
 ## Avoiding duplicates
 
 Before writing new articles, always check for existing coverage:
 
 ```bash
-# List all current slugs
-node -e 'import("./src/data/news.js").then(m => m.articles.forEach(a => console.log(a.publishedAt.slice(0,10), a.slug)));'
+# Best approach: use the search script
+node scripts/find-articles.mjs seedance
+node scripts/find-articles.mjs --tag openai --after 2026-02-01
 
-# Search for a topic
-node -e 'import("./src/data/news.js").then(m => m.articles.filter(a => a.tags.some(t => t.includes("seedance"))).forEach(a => console.log(a.slug)));'
+# Or check ARTICLE-INDEX.md for a full overview
+# (regenerate first if stale: node scripts/generate-index.mjs)
+
+# Check for existing sources before adding duplicates
+node scripts/find-source.mjs "techcrunch"
 ```
+
+## Tag taxonomy
+
+See **TAG-TAXONOMY.md** for the canonical tag list. Rules:
+- Use **3-5 tags** per article
+- Always include the **primary company tag** if the story is about a specific company
+- Always include at least one **topic tag**
+- Prefer existing tags over creating new ones
+- Add new tags to TAG-TAXONOMY.md before using them
 
 ## Style guide for articles
 
