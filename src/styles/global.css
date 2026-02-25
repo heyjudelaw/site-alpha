@@ -916,6 +916,106 @@ select {
   font-size: 0.7rem;
 }
 
+/* ── Mobile compact bar ── */
+.mobile-bar {
+  display: none;
+}
+
+.site-logo--compact {
+  font: 800 1.3rem/1 var(--headline);
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.site-logo--compact .logo-mark {
+  color: var(--accent);
+}
+
+.hamburger-btn {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.6rem;
+  background: none;
+  border: 1px solid var(--line);
+}
+
+.hamburger-btn::-webkit-details-marker {
+  display: none;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--ink);
+  position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+}
+
+.hamburger-icon::before { top: -6px; }
+.hamburger-icon::after { top: 6px; }
+
+.nav-drawer {
+  position: relative;
+}
+
+.nav-drawer-body {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 100;
+  width: 240px;
+  background: var(--surface);
+  border: 1px solid var(--ink);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.8rem 1rem;
+}
+
+.drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font: 700 0.78rem/1.3 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.drawer-links a {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.drawer-links a:hover {
+  color: var(--accent-strong);
+}
+
+.drawer-subscribe {
+  display: block;
+  margin-top: 0.8rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+/* ── Article variant: compact header at all viewports ── */
+[data-variant="article"] .flash-cards,
+[data-variant="article"] .trending-row,
+[data-variant="article"] .mission-strip {
+  display: none;
+}
+
+/* ── Responsive breakpoints ── */
 @media (max-width: 960px) {
   .flash-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -931,12 +1031,30 @@ select {
 }
 
 @media (max-width: 760px) {
-  .utility-nav {
-    gap: 0.55rem;
+  .mobile-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    max-width: 1180px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .utility-nav,
+  .mission-strip,
+  .logo-row {
+    display: none;
   }
 
   .subscribe-pill {
     margin-left: 0;
+  }
+
+  /* Article variant on mobile: hide everything except mobile bar */
+  [data-variant="article"] .trending-row,
+  [data-variant="article"] .flash-cards {
+    display: none;
   }
 }
 

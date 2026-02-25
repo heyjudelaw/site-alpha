@@ -8,7 +8,8 @@ const {
   canonical,
   type = 'website',
   article,
-  extraSchemas = []
+  extraSchemas = [],
+  pageVariant = 'default'
 } = Astro.props;
 
 const siteName = 'VideoGenNews';
@@ -60,7 +61,7 @@ const normalizeSocialImage = (imageSrc) => {
   }
 };
 const socialImage = normalizeSocialImage(article?.image?.src);
-const socialImageAlt = article?.image?.alt ?? `${siteName} social card`;
+const socialImageAlt = article?.title ?? `${siteName} social card`;
 const socialImageType = socialImage.includes('images.unsplash.com') || socialImage.endsWith('.jpg') || socialImage.endsWith('.jpeg')
   ? 'image/jpeg'
   : socialImage.endsWith('.png')
@@ -167,8 +168,32 @@ const schema = {
     {article && <meta property="article:author" content={authorName} />}
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
-  <body>
+  <body data-variant={pageVariant}>
     <header class="shell-header">
+      <div class="mobile-bar">
+        <a class="site-logo site-logo--compact" href="/"><span class="logo-mark">V</span> {siteName}</a>
+        <details class="nav-drawer">
+          <summary class="hamburger-btn" aria-label="Open navigation menu">
+            <span class="hamburger-icon"></span>
+          </summary>
+          <div class="nav-drawer-body">
+            <nav class="drawer-links">
+              <a href="/desks/model-wire/">Model Wire</a>
+              <a href="/desks/workflow-lab/">Workflow</a>
+              <a href="/desks/benchmark-lab/">Benchmark</a>
+              <a href="/desks/policy-ip-watch/">Policy/IP</a>
+              <a href="/desks/distribution-intelligence/">Distribution</a>
+              <a href="/desks/toolchain-desk/">Toolchain</a>
+              <a href="/news/">All Stories</a>
+              <a href="/about/">About</a>
+              <a href="/masthead/">Masthead</a>
+              <a href="/contact/">Contact</a>
+              <a href="/corrections/">Corrections</a>
+            </nav>
+            <a class="subscribe-pill drawer-subscribe" href="/newsletter/#signup">Newsletter</a>
+          </div>
+        </details>
+      </div>
       <div class="utility-nav">
         <a class="menu-button" href="/">Menu</a>
         <a href="/desks/model-wire/">Model Wire</a>
