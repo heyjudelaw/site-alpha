@@ -225,7 +225,6 @@ const schema = {
       <div class="flash-cards">
         {flashCards.map((item) => (
           <a class="flash-card" href={`/news/${item.slug}/`}>
-            <span class="flash-time">{ageLabel(item.publishedAt ?? item.date)}</span>
             <span class="flash-title">{item.title}</span>
           </a>
         ))}
