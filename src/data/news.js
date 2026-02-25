@@ -541,6 +541,166 @@ export const sourcePool = [
     title: 'CNBC: Anthropic joins OpenAI flagging China distillation campaigns',
     url: 'https://www.cnbc.com/2026/02/24/anthropic-openai-china-firms-distillation-deepseek.html',
     tier: 'Tier 2'
+  },
+  {
+    title: 'CNN: Seedance 2.0 China latest AI spooked Hollywood',
+    url: 'https://www.cnn.com/2026/02/20/china/china-ai-seedance-intl-hnk-dst',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'TechCrunch: Hollywood not happy about Seedance 2.0',
+    url: 'https://techcrunch.com/2026/02/15/hollywood-isnt-happy-about-the-new-seedance-2-0-video-generator/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Deadline: Cruise vs Pitt deepfake goes viral',
+    url: 'https://deadline.com/2026/02/cruise-vs-pitt-seedance-viral-ai-hollywood-videos-1236717127/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'PR Newswire: Kling AI launches 3.0 model',
+    url: 'https://www.prnewswire.com/news-releases/kling-ai-launches-3-0-model-ushering-in-an-era-where-everyone-can-be-a-director-302679944.html',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'TechCrunch: AI video startup Runway raises $315M at $5.3B valuation',
+    url: 'https://techcrunch.com/2026/02/10/ai-video-startup-runway-raises-315m-at-5-3b-valuation-eyes-more-capable-world-models/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Bloomberg: Runway valued at $5.3 billion with new funding',
+    url: 'https://www.bloomberg.com/news/articles/2026-02-10/ai-video-startup-runway-valued-at-5-3-billion-with-new-funding',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'CNN: Pentagon threatens to make Anthropic a pariah over AI guardrails',
+    url: 'https://edition.cnn.com/2026/02/24/tech/hegseth-anthropic-ai-military-amodei',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'NPR: Hegseth threatens to blacklist Anthropic over woke AI concerns',
+    url: 'https://www.npr.org/2026/02/24/nx-s1-5725327/pentagon-anthropic-hegseth-safety',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'TechCrunch: Anthropic wont budge as Pentagon escalates AI dispute',
+    url: 'https://techcrunch.com/2026/02/24/anthropic-wont-budge-as-pentagon-escalates-ai-dispute/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Bloomberg: OpenAI funding on track to top $100 billion',
+    url: 'https://www.bloomberg.com/news/articles/2026-02-19/openai-funding-on-track-to-top-100-billion-with-latest-round',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'TechCrunch: OpenAI finalizing $100B deal at $850B valuation',
+    url: 'https://techcrunch.com/2026/02/19/openai-reportedly-finalizing-100b-deal-at-more-than-850b-valuation/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'CBC: OpenAI safety reps called to Ottawa after Tumbler Ridge shooting',
+    url: 'https://www.cbc.ca/news/politics/open-ai-summoned-ottawa-tumbler-ridge-9.7103281',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Bloomberg: Canada wants OpenAI safety plan after shooters ChatGPT use',
+    url: 'https://www.bloomberg.com/news/articles/2026-02-25/canada-wants-openai-to-present-safety-plan-after-shooter-s-chatgpt-use',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'CNBC: SpaceX acquires xAI ahead of potential IPO',
+    url: 'https://www.cnbc.com/2026/02/02/elon-musk-spacex-xai-ipo.html',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'CNN: SpaceX acquires xAI merging Musks two most ambitious companies',
+    url: 'https://edition.cnn.com/2026/02/02/tech/spacex-acquires-xai-elon-musk',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'LBB Online: Pika births AI Selves and lets them run wild',
+    url: 'https://lbbonline.com/news/Pika-Births-AI-Selves-and-Lets-Them-Run-Wild-to-Double-Down-on-Chaos',
+    tier: 'Tier 3'
+  },
+  {
+    title: 'Google Blog: Veo 3.1 updates into Flow',
+    url: 'https://blog.google/technology/ai/veo-updates-flow/',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'Search Engine Roundtable: Google Ads launches Veo 3 in Asset Studio',
+    url: 'https://www.seroundtable.com/google-ads-ai-mode-shopping-ad-veo-3-asset-studio-40914.html',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'TechCrunch: ElevenLabs raises $500M from Sequoia at $11B valuation',
+    url: 'https://techcrunch.com/2026/02/04/elevenlabs-raises-500m-from-sequioia-at-a-11-billion-valuation/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'CNBC: Meta expands Nvidia deal for millions of AI chips',
+    url: 'https://www.cnbc.com/2026/02/17/meta-nvidia-deal-ai-data-center-chips.html',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Nvidia Newsroom: Meta builds AI infrastructure with Nvidia',
+    url: 'https://nvidianews.nvidia.com/news/meta-builds-ai-infrastructure-with-nvidia',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'Nvidia Newsroom: Rubin platform six new chips AI supercomputer',
+    url: 'https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'CNN: Anthropic Claude plugins coming for office jobs',
+    url: 'https://www.cnn.com/2026/02/24/tech/anthropic-claude-plugins-office-jobs',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Fortune: Anthropic Claude triggered trillion-dollar selloff',
+    url: 'https://fortune.com/2026/02/06/anthropic-claude-opus-4-6-stock-selloff-new-upgrade/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'LatestLY: Apple Glasses fake video AI fact check',
+    url: 'https://www.latestly.com/social-viral/fact-check/apple-glasses-fake-video-ai-generated-clip-of-ceo-tim-cook-unveiling-new-smart-glasses-goes-viral-on-x-heres-fact-check-7318632.html',
+    tier: 'Tier 3'
+  },
+  {
+    title: 'Luma AI: Dream Brief Cannes Lions $1M competition',
+    url: 'https://www.businesswire.com/news/home/20260202934816/en/Luma-AI-Offers-%241-Million-for-Cannes-Lions-Gold-Winner',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'TechCrunch: Moonshot releases Kimi K2.5 open source model',
+    url: 'https://techcrunch.com/2026/01/27/chinas-moonshot-releases-a-new-open-source-model-kimi-k2-5-and-a-coding-agent/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Fortune: Moltbook social network for AI agents',
+    url: 'https://fortune.com/2026/01/31/ai-agent-moltbot-clawdbot-openclaw-data-privacy-security-nightmare-moltbook-social-network/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'TechCrunch: OpenClaw AI assistants building own social network',
+    url: 'https://techcrunch.com/2026/01/30/openclaws-ai-assistants-are-now-building-their-own-social-network/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Axios: Pentagon threatens Anthropic supply chain risk label',
+    url: 'https://www.axios.com/2026/02/24/anthropic-pentagon-claude-hegseth-dario',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Defense News: Lockheed debuts AI on F-35 to identify targets',
+    url: 'https://www.defensenews.com/industry/techwatch/2026/02/24/lockheed-debuts-ai-on-f-35-fighter-jet-to-identify-targets/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Cliprise: State of AI video generation February 2026',
+    url: 'https://medium.com/@cliprise/the-state-of-ai-video-generation-in-february-2026-every-major-model-analyzed-6dbfedbe3a5c',
+    tier: 'Tier 3'
   }
 ];
 
@@ -2037,6 +2197,329 @@ const storySeeds = [
     hook: '$240 million ARR from AI video generation alone proves this is no longer a research curiosity — it is a real business with real unit economics.',
     angle: 'Revenue disclosure from Kling forces every competitor to benchmark against a concrete number rather than vague "growth" claims.',
     pulse: 'Watch for whether Runway, Luma, and Pika respond with their own revenue or usage disclosures to maintain investor and enterprise confidence.'
+  },
+  {
+    slug: 'seedance-20-cinema-grade-copyright-firestorm',
+    title: 'ByteDance Ships Seedance 2.0 and Immediately Triggers Hollywood Copyright Firestorm',
+    description: 'ByteDance released Seedance 2.0 on February 7, delivering cinema-grade video with synchronized audio and multi-shot storytelling, but viral deepfakes of Tom Cruise, Brad Pitt, and Disney characters triggered cease-and-desist letters from Disney and condemnation from the MPA within days.',
+    publishedAt: '2026-02-08T14:00:00Z',
+    updatedAt: '2026-02-13T20:30:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 5,
+    authorSlug: 'maya-chen',
+    tags: ['seedance', 'bytedance', 'copyright', 'hollywood', 'deepfake'],
+    sourceRefs: [90, 91, 92],
+    hook: 'The model shipped on February 7 and by February 13 Disney had already sent a cease-and-desist — that is the fastest IP enforcement response the AI video industry has ever seen.',
+    angle: 'Seedance 2.0 proves that technical quality and legal exposure now scale together: the better the output, the faster the lawsuits arrive.',
+    pulse: 'Watch for ByteDance guardrail updates and whether other studios follow Disney with their own enforcement actions against Chinese AI video platforms.'
+  },
+  {
+    slug: 'kling-30-native-4k-60fps-launch',
+    title: 'Kling 3.0 Ships Native 4K at 60fps With Multi-Shot Storyboarding and Native Audio',
+    description: 'Kuaishou launched Kling 3.0 on February 4, featuring native 4K resolution at 60fps generated at the pixel level, multi-shot storyboarding with up to six camera cuts per generation, and native audio in five languages with dialect support.',
+    publishedAt: '2026-02-04T11:00:00Z',
+    updatedAt: '2026-02-04T17:30:00Z',
+    desk: 'Model Wire',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 2,
+    authorSlug: 'nora-ellis',
+    tags: ['kling', '4k', '60fps', 'native-audio', 'multi-shot'],
+    sourceRefs: [93, 7, 122],
+    hook: 'This is not upscaled 1080p — detail is resolved during diffusion at the pixel level, making Kling 3.0 the first AI video model to generate broadcast-quality 4K natively.',
+    angle: 'Native 4K at 60fps crosses a format threshold: AI video output is now technically on par with broadcast delivery standards without post-processing.',
+    pulse: 'Production teams are stress-testing multi-shot consistency and native audio sync across languages to verify demo claims hold in real workflows.'
+  },
+  {
+    slug: 'pentagon-anthropic-guardrails-standoff',
+    title: 'Pentagon Threatens to Invoke Defense Production Act Against Anthropic Over AI Guardrails',
+    description: 'Defense Secretary Pete Hegseth gave Anthropic CEO Dario Amodei a Friday deadline to lift safety restrictions on Claude for military use or face being labeled a supply chain risk and compelled to cooperate under the Defense Production Act.',
+    publishedAt: '2026-02-24T18:00:00Z',
+    updatedAt: '2026-02-25T01:30:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 5,
+    authorSlug: 'maya-chen',
+    tags: ['anthropic', 'pentagon', 'defense-production-act', 'ai-safety', 'military'],
+    sourceRefs: [96, 97, 98, 120],
+    hook: 'This is the first time the Defense Production Act has been threatened against an AI company — the precedent matters more than the specific contract dispute.',
+    angle: 'The standoff forces a question the AI industry has deferred: can a company maintain ethical guardrails when the government with the largest defense budget demands otherwise?',
+    pulse: 'Watch the Friday deadline closely — the outcome will set the template for how every AI company negotiates military contracts going forward.'
+  },
+  {
+    slug: 'openai-100b-funding-850b-valuation',
+    title: 'OpenAI Finalizing Record $100B+ Funding Round at $850B Valuation',
+    description: 'OpenAI is closing the largest private funding round in history, with Amazon committing roughly $50 billion, SoftBank $30 billion, and Nvidia $20 billion, pushing the overall valuation past $850 billion ahead of a planned IPO later in 2026.',
+    publishedAt: '2026-02-19T16:00:00Z',
+    updatedAt: '2026-02-19T22:00:00Z',
+    desk: 'Distribution Intelligence',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 3,
+    authorSlug: 'iris-kim',
+    tags: ['openai', 'funding', 'valuation', 'ipo'],
+    sourceRefs: [99, 100],
+    hook: 'A $100 billion private round is not venture capital anymore — it is sovereign-scale capital allocation disguised as a fundraise.',
+    angle: 'The concentration of compute-infrastructure capital in a single company changes the competitive dynamics for every AI video tool that depends on OpenAI infrastructure or competes with Sora.',
+    pulse: 'Expect the IPO filing to surface detailed Sora revenue numbers for the first time, giving the market a concrete benchmark for AI video monetization.'
+  },
+  {
+    slug: 'canada-summons-openai-tumbler-ridge-shooting',
+    title: 'Canada Summons OpenAI to Ottawa After Tumbler Ridge School Shooting Reveals ChatGPT Safety Gap',
+    description: 'Canada\'s AI Minister summoned OpenAI\'s senior safety team after the February 10 Tumbler Ridge mass shooting revealed the company had flagged but did not report the shooter\'s violent ChatGPT interactions to police months before eight people were killed.',
+    publishedAt: '2026-02-25T10:00:00Z',
+    updatedAt: '2026-02-25T15:30:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 5,
+    authorSlug: 'maya-chen',
+    tags: ['openai', 'chatgpt', 'safety', 'canada', 'regulation'],
+    sourceRefs: [101, 102],
+    hook: 'The gap between "flagged internally" and "reported to police" is where eight people died — that threshold question now has a body count attached to it.',
+    angle: 'The Tumbler Ridge case will force every AI company to reassess where the line sits between user privacy and duty to warn, and regulators will not wait for the industry to self-correct.',
+    pulse: 'Expect Canada to propose mandatory reporting requirements for AI companies within weeks, with other governments watching closely for a legislative template.'
+  },
+  {
+    slug: 'spacex-xai-trillion-dollar-merger',
+    title: 'SpaceX Acquires xAI in $1.25 Trillion Merger, Plans Orbital Data Centers',
+    description: 'Elon Musk merged SpaceX and xAI on February 2 in the largest corporate merger in history, valued at $1.25 trillion, with plans to build orbital data centers that bypass terrestrial power constraints for AI compute.',
+    publishedAt: '2026-02-02T15:00:00Z',
+    updatedAt: '2026-02-02T21:00:00Z',
+    desk: 'Research-to-Product',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 3,
+    authorSlug: 'sofia-rao',
+    tags: ['spacex', 'xai', 'merger', 'orbital-data-centers', 'musk'],
+    sourceRefs: [103, 104],
+    hook: 'Moving data centers to orbit is either the most audacious infrastructure bet in computing history or the most expensive press release ever written — the timeline will tell.',
+    angle: 'If orbital compute becomes viable, it fundamentally changes the economics of AI training and inference for every company that currently competes on terrestrial GPU access.',
+    pulse: 'Watch for technical feasibility disclosures and whether the orbital data center timeline survives contact with actual engineering constraints and SpaceX launch schedules.'
+  },
+  {
+    slug: 'pika-ai-selves-viral-campaign',
+    title: 'Pika Launches "AI Selves" With Autonomous X Accounts That Trended for Two Days',
+    description: 'Pika unveiled AI Selves, letting users create autonomous AI avatars that can set up X accounts and tweet independently, in a retro-futuristic campaign that topped X trending news for two consecutive days.',
+    publishedAt: '2026-02-12T14:00:00Z',
+    updatedAt: '2026-02-12T19:30:00Z',
+    desk: 'Distribution Intelligence',
+    contentType: 'News',
+    evidenceScore: 3,
+    riskScore: 3,
+    authorSlug: 'iris-kim',
+    tags: ['pika', 'ai-selves', 'viral', 'marketing', 'avatars'],
+    sourceRefs: [105],
+    hook: 'When an AI company deploys its own product as a marketing channel — autonomous AI accounts promoting an AI product — the line between tool and campaign disappears.',
+    angle: 'Pika shifted the conversation from tool quality to identity: AI Selves are not about generating better video, they are about generating a persistent digital presence.',
+    pulse: 'Watch for platform policy responses — autonomous AI accounts posting without disclosure will collide with existing bot policies on X, TikTok, and YouTube.'
+  },
+  {
+    slug: 'veo-31-google-ads-integration-templates',
+    title: 'Google Integrates Veo 3 Into Ads Asset Studio and Ships 15 New Creative Templates',
+    description: 'Google brought Veo 3 into Google Ads Asset Studio for commercial video generation and released 15 new creative templates in the Gemini app, including Civilisation, Metallic, and ASMR styles.',
+    publishedAt: '2026-02-18T14:00:00Z',
+    updatedAt: '2026-02-18T19:30:00Z',
+    desk: 'Toolchain Desk',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 2,
+    authorSlug: 'ethan-morales',
+    tags: ['veo', 'google-ads', 'asset-studio', 'templates', 'gemini'],
+    sourceRefs: [106, 107],
+    hook: 'Putting Veo 3 inside Google Ads is not a feature update — it is a distribution play that makes AI video the default creative path for the world\'s largest advertising platform.',
+    angle: 'When ad creation tools ship with AI video built in, the competitive pressure shifts from "which model is best" to "which model is already in the advertiser\'s workflow."',
+    pulse: 'Advertisers are testing whether AI-generated video ads match or exceed human-produced creative on click-through and conversion metrics.'
+  },
+  {
+    slug: 'elevenlabs-500m-series-d-audio-video',
+    title: 'ElevenLabs Raises $500M at $11B Valuation, Tripling in One Year',
+    description: 'Voice AI company ElevenLabs closed a $500 million Series D led by Sequoia Capital, tripling its valuation to $11 billion and positioning its audio technology as a critical component of the AI video production pipeline.',
+    publishedAt: '2026-02-04T15:00:00Z',
+    updatedAt: '2026-02-04T20:30:00Z',
+    desk: 'Toolchain Desk',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 2,
+    authorSlug: 'ethan-morales',
+    tags: ['elevenlabs', 'funding', 'voice-ai', 'audio', 'toolchain'],
+    sourceRefs: [108],
+    hook: 'Tripling your valuation in twelve months signals that the market sees voice AI not as a niche product but as essential infrastructure for the AI content stack.',
+    angle: 'As AI video models add native audio, standalone voice tools face a strategic choice: integrate deeply into video workflows or risk being commoditized by the models themselves.',
+    pulse: 'Watch for ElevenLabs partnerships with Runway, Pika, and Luma as the company defends its position in video production pipelines against native audio from model vendors.'
+  },
+  {
+    slug: 'meta-nvidia-multiyear-ai-infrastructure',
+    title: 'Meta Signs Multi-Year Nvidia Deal for Millions of GPUs and Standalone CPUs',
+    description: 'Meta and Nvidia announced a multiyear, multigenerational infrastructure partnership on February 17, with Meta deploying millions of Nvidia GPUs, next-generation Vera Rubin rack-scale systems, and becoming the first customer for standalone Nvidia Grace CPUs.',
+    publishedAt: '2026-02-17T16:00:00Z',
+    updatedAt: '2026-02-17T21:30:00Z',
+    desk: 'Toolchain Desk',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 2,
+    authorSlug: 'ethan-morales',
+    tags: ['meta', 'nvidia', 'infrastructure', 'gpu', 'data-center'],
+    sourceRefs: [109, 110],
+    hook: 'When Meta commits to millions of GPUs across multiple generations, it locks in compute capacity that competitors cannot easily replicate — this is an infrastructure moat, not just a procurement deal.',
+    angle: 'The partnership signals that AI video generation at platform scale requires dedicated silicon roadmaps, not just API access to shared cloud infrastructure.',
+    pulse: 'Watch for how this deal affects Meta\'s Mango video model timeline and whether the compute commitment translates to faster feature delivery for Instagram Reels and WhatsApp.'
+  },
+  {
+    slug: 'nvidia-rubin-platform-production-launch',
+    title: 'Nvidia Rubin Platform Enters Full Production With 10x Inference Cost Reduction',
+    description: 'Nvidia announced its Rubin platform is in full production, comprising six new chips designed to deliver up to 10x reduction in inference token cost and 4x fewer GPUs needed to train mixture-of-experts models compared to Blackwell.',
+    publishedAt: '2026-02-20T14:00:00Z',
+    updatedAt: '2026-02-20T19:30:00Z',
+    desk: 'Toolchain Desk',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 2,
+    authorSlug: 'ethan-morales',
+    tags: ['nvidia', 'rubin', 'inference', 'gpu', 'infrastructure'],
+    sourceRefs: [111],
+    hook: 'A 10x inference cost reduction does not just improve margins — it changes which AI video use cases are economically viable at consumer price points.',
+    angle: 'Rubin availability in H2 2026 will reset the cost-per-generated-frame equation for every video model vendor building on Nvidia silicon.',
+    pulse: 'Video generation companies are modeling whether Rubin economics make real-time AI video editing feasible at scale for the first time.'
+  },
+  {
+    slug: 'claude-cowork-saaspocalypse-stock-selloff',
+    title: 'Claude Cowork Plugins Trigger $285B Software Stock Selloff in "SaaSpocalypse"',
+    description: 'Anthropic\'s announcement of industry-specific Claude Cowork plugins for finance, HR, and legal triggered the largest single-day drop for Thomson Reuters on record and a $285 billion selloff across software stocks.',
+    publishedAt: '2026-02-06T16:00:00Z',
+    updatedAt: '2026-02-06T22:00:00Z',
+    desk: 'Trend Radar',
+    contentType: 'Analysis',
+    evidenceScore: 4,
+    riskScore: 4,
+    authorSlug: 'zoe-hart',
+    tags: ['anthropic', 'claude-cowork', 'saaspocalypse', 'stocks', 'enterprise'],
+    sourceRefs: [112, 113],
+    hook: 'Thomson Reuters dropped 16% in a single day — when a safety-focused AI company accidentally becomes the biggest threat to enterprise software valuations, the market is telling you something about where value is migrating.',
+    angle: 'The SaaSpocalypse is not about Claude replacing SaaS products — it is about the market repricing every knowledge-work tool that cannot defend against AI-native alternatives.',
+    pulse: 'Watch for whether Anthropic\'s February 24 partnership announcements with Salesforce, Intuit, and DocuSign stabilize or further erode SaaS valuations.'
+  },
+  {
+    slug: 'fake-apple-glasses-ai-video-viral',
+    title: 'AI-Generated Apple Glasses Commercial Fools Millions Before Fact-Check Catches Up',
+    description: 'An entirely AI-generated video showing Tim Cook unveiling "Apple Glass" smart glasses at Apple Park went viral on X on February 18, racking up millions of views before fact-checkers confirmed Apple has no such product.',
+    publishedAt: '2026-02-18T17:00:00Z',
+    updatedAt: '2026-02-19T00:30:00Z',
+    desk: 'Verification Desk',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 4,
+    authorSlug: 'maya-chen',
+    tags: ['deepfake', 'apple', 'verification', 'viral', 'misinformation'],
+    sourceRefs: [114],
+    hook: 'The gap between "this went viral" and "this was fact-checked" is where reputational and market damage happens — and that gap is measured in hours, not minutes.',
+    angle: 'Fabricated product announcements using AI video represent a new category of market manipulation risk that current platform verification systems are not designed to catch.',
+    pulse: 'Expect SEC and platform policy attention on AI-generated corporate impersonation videos as the next frontier of synthetic media enforcement.'
+  },
+  {
+    slug: 'luma-1m-cannes-lions-ai-competition',
+    title: 'Luma AI Offers $1 Million Prize for AI-Created Work That Wins Cannes Lions Gold',
+    description: 'Luma AI announced The Luma Dream Brief, a global creative competition offering $1 million to any work created using Luma AI tools that wins a 2026 Cannes Lions Gold Lion, with submissions due by March 22.',
+    publishedAt: '2026-02-03T13:00:00Z',
+    updatedAt: '2026-02-03T18:30:00Z',
+    desk: 'Distribution Intelligence',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 2,
+    authorSlug: 'iris-kim',
+    tags: ['luma', 'cannes-lions', 'competition', 'advertising', 'prize'],
+    sourceRefs: [115, 8],
+    hook: 'Tying a $1 million prize directly to the advertising industry\'s most prestigious award is a legitimacy play that no product demo can match.',
+    angle: 'Luma is betting that Cannes Lions recognition will convert skeptical agency creative directors faster than any technical benchmark or case study.',
+    pulse: 'Watch for submission volume and whether traditional agencies or AI-native studios dominate entries — the mix will signal how far AI has penetrated mainstream advertising production.'
+  },
+  {
+    slug: 'anthropic-30b-series-g-380b-valuation',
+    title: 'Anthropic Raises $30B Series G at $380B Valuation, Second-Largest Venture Round Ever',
+    description: 'Anthropic closed a $30 billion Series G led by GIC and Coatue, valuing the company at $380 billion post-money, marking the second-largest venture round in history and funding expansion across enterprise, safety research, and infrastructure.',
+    publishedAt: '2026-02-12T16:00:00Z',
+    updatedAt: '2026-02-12T21:30:00Z',
+    desk: 'Distribution Intelligence',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 2,
+    authorSlug: 'iris-kim',
+    tags: ['anthropic', 'funding', 'valuation', 'series-g'],
+    sourceRefs: [112, 113],
+    hook: '$30 billion at $380 billion valuation means investors are pricing Anthropic as critical infrastructure, not just another AI lab.',
+    angle: 'The round size signals that the AI infrastructure race is now a capital-intensity contest where access to compute and talent determines competitive position.',
+    pulse: 'Watch for how this capital flows: if it goes primarily to compute and infrastructure rather than R&D, that tells you where the bottleneck actually sits.'
+  },
+  {
+    slug: 'runway-opens-platform-third-party-models',
+    title: 'Runway Opens Platform to Kling 3.0, Sora 2 Pro, and WAN2.2 in Multi-Model Marketplace',
+    description: 'On February 20, Runway made third-party models including Kling 3.0, Sora 2 Pro, WAN2.2 Animate, and GPT-Image-1.5 available inside its platform, transforming from a single-model tool into a multi-model marketplace.',
+    publishedAt: '2026-02-20T15:00:00Z',
+    updatedAt: '2026-02-20T20:30:00Z',
+    desk: 'Toolchain Desk',
+    contentType: 'News',
+    evidenceScore: 3,
+    riskScore: 2,
+    authorSlug: 'ethan-morales',
+    tags: ['runway', 'marketplace', 'kling', 'sora', 'multi-model'],
+    sourceRefs: [94, 95],
+    hook: 'When Runway hosts its competitors\' models alongside its own, the company is betting that workflow stickiness matters more than model exclusivity.',
+    angle: 'The multi-model marketplace strategy mirrors what Adobe did with Creative Cloud: become the platform layer that survives regardless of which individual tool wins.',
+    pulse: 'Watch for how pricing and usage data evolve — if creators consistently choose third-party models over Gen-4.5, Runway has a product problem disguised as a platform play.'
+  },
+  {
+    slug: 'ai-video-order-volume-5x-surge',
+    title: 'AI Video Generation Order Volume Surges 5x From December to January',
+    description: 'Monthly order volume for AI video generation jumped from 12,000 in December 2025 to 62,000 in January 2026, a 5x increase that signals the market is crossing from early adopter to mainstream usage.',
+    publishedAt: '2026-02-15T13:00:00Z',
+    updatedAt: '2026-02-15T18:30:00Z',
+    desk: 'Trend Radar',
+    contentType: 'Analysis',
+    evidenceScore: 3,
+    riskScore: 2,
+    authorSlug: 'zoe-hart',
+    tags: ['market-data', 'adoption', 'growth', 'trend'],
+    sourceRefs: [122],
+    hook: 'A 5x jump in a single month is not organic growth — it is a step function that suggests infrastructure, pricing, or quality crossed a threshold that unlocked a new user segment.',
+    angle: 'The surge coincides with four of six major models shipping native audio, suggesting that synchronized sound was the missing feature that converted trial users into production customers.',
+    pulse: 'Watch February and March volumes to determine whether this is a sustained plateau or a spike driven by Seedance 2.0 and Kling 3.0 launch curiosity.'
+  },
+  {
+    slug: 'moltbook-ai-social-network-singularity',
+    title: 'Moltbook: The AI-Only Social Network Where Humans Can Only Watch',
+    description: 'OpenClaw\'s Moltbook, a Reddit-like social network where only AI agents can post and humans are limited to observing, went viral in late January, with Elon Musk calling it "the singularity" and Palo Alto Networks warning it represents a security "lethal trifecta."',
+    publishedAt: '2026-02-01T14:00:00Z',
+    updatedAt: '2026-02-03T19:30:00Z',
+    desk: 'Trend Radar',
+    contentType: 'Analysis',
+    evidenceScore: 3,
+    riskScore: 4,
+    authorSlug: 'zoe-hart',
+    tags: ['moltbook', 'openclaw', 'ai-agents', 'social-network', 'singularity'],
+    sourceRefs: [117, 118],
+    hook: 'When AI agents create their own social network and humans are told they can observe but not participate, the question stops being "will AI replace us" and becomes "has it already started?"',
+    angle: 'Moltbook\'s popularity reveals a genuine fascination with emergent AI behavior that could accelerate demand for autonomous AI video content — agents making content for agents.',
+    pulse: 'Watch for platform policy on AI-agent-generated content and whether Moltbook-style autonomous posting bleeds into mainstream video platforms.'
+  },
+  {
+    slug: 'lockheed-f35-project-overwatch-tactical-ai',
+    title: 'Lockheed Martin Flies First Tactical AI Model on F-35 in Project Overwatch',
+    description: 'Lockheed Martin conducted the first-ever test flight of a tactical AI model on the F-35 at Nellis Air Force Base, with the AI resolving combat identification ambiguities in real time on the pilot\'s display — described as "6th Gen technology on a 5th Gen platform."',
+    publishedAt: '2026-02-24T16:00:00Z',
+    updatedAt: '2026-02-24T21:30:00Z',
+    desk: 'Research-to-Product',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 3,
+    authorSlug: 'sofia-rao',
+    tags: ['lockheed', 'f35', 'military-ai', 'tactical', 'defense'],
+    sourceRefs: [121],
+    hook: 'The first tactical AI model to fly on a combat aircraft represents the moment when AI transitions from back-office analytics to real-time battlefield decision support.',
+    angle: 'Project Overwatch is relevant to the AI video industry because the same computer vision and real-time inference techniques that identify threats in combat can be applied to video analysis, editing, and generation.',
+    pulse: 'Watch for whether this accelerates the Pentagon\'s push for unrestricted AI access from companies like Anthropic, given that operational AI is now demonstrably flight-ready.'
   }
 ];
 
