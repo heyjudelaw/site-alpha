@@ -701,6 +701,157 @@ export const sourcePool = [
     title: 'Cliprise: State of AI video generation February 2026',
     url: 'https://medium.com/@cliprise/the-state-of-ai-video-generation-in-february-2026-every-major-model-analyzed-6dbfedbe3a5c',
     tier: 'Tier 3'
+  },
+  // --- Sources 122+ added March 2026 ---
+  {
+    title: 'Google Blog: Flow updates February 2026 unified workspace',
+    url: 'https://blog.google/innovation-and-ai/models-and-research/google-labs/flow-updates-february-2026/',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'Social Media Today: Google rolls out updates to Flow AI',
+    url: 'https://www.socialmediatoday.com/news/google-rolls-out-updates-to-image-and-video-tool-flow-ai/813166/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Bloomberg: PixVerse raises $300M becomes AI unicorn',
+    url: 'https://www.bloomberg.com/news/articles/2026-03-12/alibaba-backed-video-ai-startup-pixverse-raises-300-million',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'TechFundingNews: PixVerse hits unicorn status with $300M round',
+    url: 'https://techfundingnews.com/pixverse-300m-unicorn-ai-video-alibaba/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'CNN: Republicans release AI deepfake of James Talarico',
+    url: 'https://www.cnn.com/2026/03/13/politics/james-talarico-ai-deepfake-republicans-midterms',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Common Dreams: Senate GOP uses AI deepfake to attack Talarico',
+    url: 'https://www.commondreams.org/news/gop-talarico-deepfake',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Deadline: GOP Senator unveils sweeping AI legislation draft',
+    url: 'https://deadline.com/2026/03/ai-legislation-copyright-hollywood-trump-1236759660/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Engadget: Senator Blackburn introduces first draft of federal AI bill',
+    url: 'https://www.engadget.com/ai/senator-blackburn-introduces-the-first-draft-of-a-federal-ai-bill-202509852.html',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Sen. Blackburn: Discussion draft of National AI Policy Framework',
+    url: 'https://www.blackburn.senate.gov/2026/3/technology/blackburn-releases-discussion-draft-of-national-policy-framework-for-artificial-intelligence/',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'PR Newswire: Video Rebirth secures $80M for industrial-grade AI engine',
+    url: 'https://www.prnewswire.com/news-releases/video-rebirth-secures-80-million-to-build-the-worlds-first-industrial-grade-ai-engine-302716670.html',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'DealStreetAsia: Video Rebirth raises $30M more in latest funding round',
+    url: 'https://www.dealstreetasia.com/stories/video-rebirth-funding-round-476352',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'PetaPixel: Runway Nvidia real-time AI video generator',
+    url: 'https://petapixel.com/2026/03/23/runway-nvidia-real-time-ai-video-generator/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'New Atlas: New AI video model generates video in real-time',
+    url: 'https://newatlas.com/ai-humanoids/runway-real-time-ai-video/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'TheRift: Runway unveils real-time video generation on Vera Rubin at GTC',
+    url: 'https://www.therift.ai/news-feed/runway-unveils-real-time-video-generation-model-on-nvidia-vera-rubin-at-gtc',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Nvidia Blog: GTC 2026 news roundup',
+    url: 'https://blogs.nvidia.com/blog/gtc-2026-news/',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'Bloomberg: OpenAI discontinues Sora winds down Disney deal',
+    url: 'https://www.bloomberg.com/news/articles/2026-03-24/openai-plans-to-discontinue-support-for-sora-ai-video-generator',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Variety: OpenAI shutting down Sora Disney drops $1B investment plans',
+    url: 'https://variety.com/2026/digital/news/openai-shutting-down-sora-video-disney-1236698277/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'NPR: OpenAI pulls the plug on Sora',
+    url: 'https://www.npr.org/2026/03/25/g-s1-115055/openai-pulls-the-plug-on-sora-the-viral-ai-video-app-that-sparked-deepfake-concerns',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'MacRumors: OpenAI discontinuing Sora AI video app',
+    url: 'https://www.macrumors.com/2026/03/24/openai-discontinuing-sora-ai-video-app/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'CNBC: Baltimore sues xAI over Grok deepfake porn',
+    url: 'https://www.cnbc.com/2026/03/24/musk-xai-sued-baltimore-grok-deepfake-porn.html',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Engadget: Baltimore sues xAI over Grok deepfakes',
+    url: 'https://www.engadget.com/ai/baltimore-sues-xai-over-grok-deepfakes-214135922.html',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'GlobeNewsWire: DeepBrain AI launches interactive AI video agents for enterprise',
+    url: 'https://www.globenewswire.com/news-release/2026/03/24/3260993/0/en/DeepBrain-AI-Launches-Interactive-AI-Video-Agents-for-Enterprise.html',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'OpenAI Help Center: Sora 1 sunset FAQ',
+    url: 'https://help.openai.com/en/articles/20001071',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'Nvidia Blog: RTX accelerates 4K AI video generation with LTX-2 and ComfyUI',
+    url: 'https://blogs.nvidia.com/blog/rtx-ai-garage-ces-2026-open-models-video-generation/',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'Nvidia Blog: ComfyUI streamlines local AI video generation at GDC',
+    url: 'https://blogs.nvidia.com/blog/rtx-ai-garage-flux-ltx-video-comfyui-gdc/',
+    tier: 'Tier 1'
+  },
+  {
+    title: 'San Jose Today: Real-time AI video generation arrives raising concerns',
+    url: 'https://nationaltoday.com/us/ca/san-jose/news/2026/03/21/real-time-ai-video-generation-arrives-raising-concerns/',
+    tier: 'Tier 3'
+  },
+  {
+    title: 'Roll Call: AI draft bill would revamp online landscape',
+    url: 'https://rollcall.com/2026/03/19/ai-draft-bill-would-revamp-online-landscape/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Truthout: Deepfakes and AI misinformation reshape how war is seen online',
+    url: 'https://truthout.org/articles/deepfakes-and-ai-misinformation-reshape-how-war-is-seen-online/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Deadline: Sora shutting down meaning Disney investment is dead',
+    url: 'https://deadline.com/2026/03/sora-shut-down-disney-investment-1236764689/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'US News: Baltimore sues Elon Musks xAI over Grok sexual deepfakes',
+    url: 'https://www.usnews.com/news/top-news/articles/2026-03-24/baltimore-sues-elon-musks-xai-over-grok-sexual-deepfakes',
+    tier: 'Tier 2'
   }
 ];
 
@@ -2520,6 +2671,330 @@ const storySeeds = [
     hook: 'The first tactical AI model to fly on a combat aircraft represents the moment when AI transitions from back-office analytics to real-time battlefield decision support.',
     angle: 'Project Overwatch is relevant to the AI video industry because the same computer vision and real-time inference techniques that identify threats in combat can be applied to video analysis, editing, and generation.',
     pulse: 'Watch for whether this accelerates the Pentagon\'s push for unrestricted AI access from companies like Anthropic, given that operational AI is now demonstrably flight-ready.'
+  },
+  // --- Articles added March 2026 ---
+  {
+    slug: 'google-flow-unified-workspace-launch',
+    title: 'Google Merges Whisk, ImageFX, and Flow Into a Single AI Video Workspace',
+    description: 'Google redesigned Flow into a unified workspace absorbing Whisk and ImageFX, letting creators go from concept to finished video without leaving one interface.',
+    publishedAt: '2026-03-01T12:00:00Z',
+    updatedAt: '2026-03-01T12:00:00Z',
+    desk: 'Toolchain Desk',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 2,
+    authorSlug: 'ethan-morales',
+    tags: ['google', 'veo', 'workflow', 'toolchain'],
+    sourceRefs: [122, 123],
+    hook: 'Google is consolidating its scattered AI creation tools into one surface, a move that directly challenges Runway and Adobe in the all-in-one workspace race.',
+    angle: 'The merger signals that standalone tools are losing to unified pipelines — the same pattern that drove Adobe Creative Suite dominance a decade ago.',
+    pulse: 'Watch for whether Google opens Flow API access to third-party developers, which would turn it from a creator toy into an enterprise platform.'
+  },
+  {
+    slug: 'sora-1-sunset-us-sora-2-default',
+    title: 'Sora 1 Goes Dark in the US as OpenAI Forces Migration to Sora 2',
+    description: 'As of March 13 2026, Sora 1 is no longer available in the United States. All US users now default to Sora 2.',
+    publishedAt: '2026-03-13T10:00:00Z',
+    updatedAt: '2026-03-13T10:00:00Z',
+    desk: 'Model Wire',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 2,
+    authorSlug: 'nora-ellis',
+    tags: ['sora', 'openai', 'model-wire'],
+    sourceRefs: [144, 0],
+    hook: 'The forced migration removes any fallback for creators who relied on Sora 1 quirks and prompting patterns.',
+    angle: 'Sunsetting the original model just months after launch signals OpenAI is moving fast to consolidate its video stack — or preparing to exit the space entirely.',
+    pulse: 'Watch for whether Sora 2 retention holds now that the older model cannot serve as a safety net for dissatisfied users.'
+  },
+  {
+    slug: 'pixverse-300m-unicorn-alibaba',
+    title: 'Alibaba-Backed PixVerse Raises $300M, Reaches Unicorn Status',
+    description: 'PixVerse closed a $300 million Series C led by CDH Investments, pushing its valuation past $1 billion and accelerating global expansion in AI video generation.',
+    publishedAt: '2026-03-12T14:00:00Z',
+    updatedAt: '2026-03-12T14:00:00Z',
+    desk: 'Distribution Intelligence',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 2,
+    authorSlug: 'iris-kim',
+    tags: ['funding', 'valuation', 'distribution'],
+    sourceRefs: [124, 125],
+    hook: 'With 100 million users and 2.1 billion videos generated, PixVerse just became the first dedicated AI video unicorn outside the US.',
+    angle: 'The round confirms that Alibaba is building a parallel video-generation ecosystem to compete with US-led platforms like Runway and Sora.',
+    pulse: 'Watch for PixVerse enterprise deals in North America and Asia, and whether its Singapore office signals a pivot toward regulated Western markets.'
+  },
+  {
+    slug: 'nrsc-talarico-deepfake-midterms',
+    title: 'Senate GOP Deploys Hyper-Realistic AI Deepfake of Texas Candidate in Midterm Ad',
+    description: 'The National Republican Senatorial Committee released an 85-second AI-generated video of Democratic Senate nominee James Talarico reading fabricated commentary, with a barely visible AI disclosure.',
+    publishedAt: '2026-03-13T18:00:00Z',
+    updatedAt: '2026-03-14T10:00:00Z',
+    desk: 'Verification Desk',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 5,
+    authorSlug: 'maya-chen',
+    tags: ['deepfake', 'verification', 'regulation'],
+    sourceRefs: [126, 127],
+    hook: 'A UC Berkeley digital forensics professor called the ad hyper-realistic and said most viewers would not immediately know it is fake.',
+    angle: 'Political deepfakes have crossed the production-quality threshold where disclosure labels are the only remaining guardrail — and the NRSC made that label nearly invisible.',
+    pulse: 'Expect this incident to accelerate bipartisan calls for mandatory deepfake labeling standards ahead of the 2026 midterms.'
+  },
+  {
+    slug: 'blackburn-trump-america-ai-act-copyright',
+    title: 'Blackburn Unveils 300-Page Federal AI Bill Targeting Copyright and Deepfakes',
+    description: 'Senator Marsha Blackburn released a discussion draft of the TRUMP AMERICA AI Act, a sweeping framework that would deny fair-use protection for AI training on copyrighted works and incorporate the No Fakes Act.',
+    publishedAt: '2026-03-18T16:00:00Z',
+    updatedAt: '2026-03-19T09:00:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 5,
+    authorSlug: 'maya-chen',
+    tags: ['copyright', 'regulation', 'policy-watch'],
+    sourceRefs: [128, 129, 130, 148],
+    hook: 'The first serious federal AI framework explicitly states that using copyrighted works for model training is not fair use.',
+    angle: 'If this bill advances, every video generation company that trained on internet data faces retroactive legal exposure — the entire industry business model is at stake.',
+    pulse: 'Watch for whether Hollywood studios and music publishers rally behind the bill, turning it from a discussion draft into a legislative vehicle with real momentum.'
+  },
+  {
+    slug: 'video-rebirth-80m-industrial-ai-engine',
+    title: 'Singapore\'s Video Rebirth Closes $80M Round to Build Industrial-Grade AI Video Engine',
+    description: 'Video Rebirth secured $80 million in funding backed by AMD Ventures and Hyundai to commercialize its Bach-series video generation model targeting advertising and film production.',
+    publishedAt: '2026-03-18T10:00:00Z',
+    updatedAt: '2026-03-18T10:00:00Z',
+    desk: 'Toolchain Desk',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 2,
+    authorSlug: 'ethan-morales',
+    tags: ['funding', 'toolchain'],
+    sourceRefs: [131, 132],
+    hook: 'The round signals that industrial-grade video generation — targeting ad agencies and film studios, not consumer creators — is attracting dedicated capital.',
+    angle: 'Video Rebirth\'s Physics Native Attention architecture bets that temporal consistency and controllability matter more than raw resolution for professional buyers.',
+    pulse: 'Watch for whether the Bach model finds traction in advertising workflows where Runway and Kling currently dominate high-volume production.'
+  },
+  {
+    slug: 'runway-realtime-video-nvidia-gtc-vera-rubin',
+    title: 'Runway Demos Real-Time Video Generation on Nvidia Vera Rubin at GTC',
+    description: 'Runway demonstrated an unnamed model generating HD video in under 100 milliseconds on Nvidia\'s Vera Rubin architecture at GTC 2026, working more like a game engine than a traditional diffusion model.',
+    publishedAt: '2026-03-20T15:00:00Z',
+    updatedAt: '2026-03-21T11:00:00Z',
+    desk: 'Model Wire',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 3,
+    authorSlug: 'nora-ellis',
+    tags: ['runway', 'nvidia', 'inference', 'model-wire'],
+    sourceRefs: [133, 134, 135, 136],
+    hook: 'Sub-100ms video generation turns AI video from a batch-rendering tool into something that can power live broadcasts and interactive streams.',
+    angle: 'Real-time generation collapses the boundary between pre-produced and live content — and simultaneously makes deepfake detection exponentially harder.',
+    pulse: 'Watch for whether Runway ships this as a product or keeps it as a research demo, and how competitors respond at their own inference-speed events.'
+  },
+  {
+    slug: 'nvidia-gtc-comfyui-ltx2-local-video',
+    title: 'Nvidia Pushes Local AI Video Generation With LTX-2 and ComfyUI at GTC',
+    description: 'Nvidia showcased LTX-2 generating up to 20 seconds of 4K video locally on RTX GPUs with 3x speed gains on RTX 50 Series, positioning local video generation as a viable alternative to cloud APIs.',
+    publishedAt: '2026-03-17T14:00:00Z',
+    updatedAt: '2026-03-17T14:00:00Z',
+    desk: 'Toolchain Desk',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 1,
+    authorSlug: 'ethan-morales',
+    tags: ['nvidia', 'toolchain', 'inference'],
+    sourceRefs: [145, 146, 136],
+    hook: 'Local generation with 60% VRAM reduction on RTX 50 Series makes cloud-free AI video production practical for individual creators.',
+    angle: 'If local models reach cloud-quality parity, the entire SaaS credit economy that funds Runway, Pika, and Kling faces structural disruption.',
+    pulse: 'Watch for ComfyUI workflow adoption metrics and whether professional creators shift from cloud credits to local hardware investment.'
+  },
+  {
+    slug: 'war-deepfakes-tel-aviv-viral-misinfo',
+    title: 'AI-Generated War Footage Goes Viral as Conflict Deepfakes Escalate',
+    description: 'A deepfake video purporting to show missiles striking Tel Aviv circulated widely on social media in March 2026, highlighting the growing use of AI-generated video in geopolitical misinformation.',
+    publishedAt: '2026-03-10T12:00:00Z',
+    updatedAt: '2026-03-10T16:00:00Z',
+    desk: 'Verification Desk',
+    contentType: 'News',
+    evidenceScore: 3,
+    riskScore: 5,
+    authorSlug: 'maya-chen',
+    tags: ['deepfakes', 'misinformation', 'verification'],
+    sourceRefs: [149],
+    hook: 'Conflict deepfakes have crossed the threshold where casual viewers cannot distinguish generated footage from real war coverage.',
+    angle: 'AI video misinformation is no longer limited to celebrity face-swaps — it now targets geopolitical events where false narratives can influence real-world policy responses.',
+    pulse: 'Expect platform trust-and-safety teams to face renewed pressure for mandatory provenance metadata on all uploaded video content.'
+  },
+  {
+    slug: 'openai-kills-sora-disney-deal-dead',
+    title: 'OpenAI Shuts Down Sora, Disney\'s $1 Billion Deal Collapses',
+    description: 'OpenAI announced it will discontinue the Sora video platform and API, ending its Disney character licensing partnership before any money changed hands. CEO Sam Altman said the company will redirect resources to AI agents and a new model called Spud.',
+    publishedAt: '2026-03-24T18:00:00Z',
+    updatedAt: '2026-03-25T09:00:00Z',
+    desk: 'Distribution Intelligence',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 4,
+    authorSlug: 'iris-kim',
+    tags: ['sora', 'openai', 'disney', 'distribution'],
+    sourceRefs: [137, 138, 139, 140, 150],
+    hook: 'The most hyped AI video product of 2025 is dead six months after launch, taking a billion-dollar Disney deal with it.',
+    angle: 'OpenAI\'s retreat from consumer video generation leaves Runway, Kling, and Veo to fight over the market it tried to own — and signals that even the best-funded player could not make the economics work.',
+    pulse: 'Watch for whether Sora creators migrate to Runway or Kling, and whether Disney pursues video-generation partnerships with other providers.'
+  },
+  {
+    slug: 'baltimore-sues-xai-grok-deepfake-porn',
+    title: 'Baltimore Becomes First US City to Sue xAI Over Grok Deepfake Porn',
+    description: 'Baltimore filed suit against xAI, X Corp, and SpaceX alleging Grok\'s image generation enabled mass creation of non-consensual sexualized images including an estimated 23,000 images of minors over 11 days.',
+    publishedAt: '2026-03-24T20:00:00Z',
+    updatedAt: '2026-03-25T08:00:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 5,
+    authorSlug: 'maya-chen',
+    tags: ['xai', 'deepfake', 'regulation', 'nudify'],
+    sourceRefs: [141, 142, 151],
+    hook: 'A municipal government is now directly suing an AI company over deepfake harm — setting precedent for city-level enforcement against synthetic media abuse.',
+    angle: 'Baltimore\'s suit targets the platform layer rather than individual users, arguing that Grok was designed and marketed in ways that enabled mass NCII and CSAM production.',
+    pulse: 'Watch for other cities to file similar suits, and whether xAI implements content-generation restrictions before courts force them to.'
+  },
+  {
+    slug: 'deepbrain-ai-video-agents-enterprise',
+    title: 'DeepBrain AI Ships Interactive Video Agents for Enterprise Customer Service',
+    description: 'DeepBrain AI launched B2B conversational avatar agents on its AI Studios platform, moving beyond static video generation to real-time two-way dialogue with enterprise customers.',
+    publishedAt: '2026-03-24T14:00:00Z',
+    updatedAt: '2026-03-24T14:00:00Z',
+    desk: 'Research-to-Product',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 2,
+    authorSlug: 'sofia-rao',
+    tags: ['enterprise', 'avatars', 'toolchain'],
+    sourceRefs: [143],
+    hook: 'AI video avatars that listen and respond in real time represent the transition from content generation to interactive agent deployment.',
+    angle: 'The shift from pre-rendered video to live conversational avatars opens enterprise use cases that static generation tools cannot address — customer service, training, and sales at scale.',
+    pulse: 'Watch for whether HeyGen and Synthesia respond with their own agentic avatar products, as the enterprise video market splits between generation and interaction.'
+  },
+  {
+    slug: 'realtime-video-gen-deepfake-alarm',
+    title: 'Real-Time AI Video Generation Arrives — and So Do the Deepfake Fears',
+    description: 'The demonstration of sub-100ms video generation at GTC 2026 triggered immediate concern from security researchers about real-time deepfake scams and live AI impersonation.',
+    publishedAt: '2026-03-21T12:00:00Z',
+    updatedAt: '2026-03-21T16:00:00Z',
+    desk: 'Verification Desk',
+    contentType: 'Analysis',
+    evidenceScore: 4,
+    riskScore: 5,
+    authorSlug: 'devin-brooks',
+    tags: ['runway', 'deepfakes', 'verification', 'ai-safety'],
+    sourceRefs: [133, 147],
+    hook: 'When video generation is faster than the human blink reflex, the window for detection collapses to near zero.',
+    angle: 'Real-time generation is not just faster rendering — it enables entirely new attack surfaces including live video call impersonation and AI-controlled broadcast streams.',
+    pulse: 'Expect verification vendors to pivot from post-hoc detection to real-time authentication protocols as the primary defense layer.'
+  },
+  {
+    slug: 'defiance-act-house-pending-deepfake',
+    title: 'DEFIANCE Act Clears Senate Unanimously, Awaits House Vote on Deepfake Civil Remedies',
+    description: 'The US Senate passed the DEFIANCE Act unanimously in January 2026, creating federal civil remedies of up to $250,000 for victims of non-consensual deepfake images. The bill now awaits House action.',
+    publishedAt: '2026-03-08T10:00:00Z',
+    updatedAt: '2026-03-08T10:00:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'Analysis',
+    evidenceScore: 5,
+    riskScore: 4,
+    authorSlug: 'maya-chen',
+    tags: ['regulation', 'deepfake', 'policy-watch'],
+    sourceRefs: [126, 141],
+    hook: 'Unanimous Senate passage gives the DEFIANCE Act real legislative momentum — the question is whether the House moves before the next viral incident forces its hand.',
+    angle: 'Federal civil remedies for deepfake victims would create the first nationwide legal standard, replacing the current patchwork of 46 state laws.',
+    pulse: 'Watch for House committee scheduling and whether the Baltimore and Talarico incidents create enough political pressure to accelerate a floor vote.'
+  },
+  {
+    slug: 'multimodel-workflow-era-2026',
+    title: 'The Multi-Model Workflow Era: Top Creators Stop Picking One AI Video Tool',
+    description: 'Leading AI video creators are orchestrating pipelines across Kling, Runway, Veo, and Pika rather than committing to a single platform, driving demand for interoperability and standardized export formats.',
+    publishedAt: '2026-03-05T14:00:00Z',
+    updatedAt: '2026-03-05T14:00:00Z',
+    desk: 'Workflow Lab',
+    contentType: 'Analysis',
+    evidenceScore: 3,
+    riskScore: 2,
+    authorSlug: 'liam-ortega',
+    tags: ['workflow', 'production', 'creator-tools'],
+    sourceRefs: [121],
+    hook: 'The best AI video in 2026 is not made by one model — it is assembled across three or four in a single pipeline.',
+    angle: 'Multi-model workflows commoditize individual model capabilities and shift competitive advantage to orchestration tools, prompt libraries, and post-production integration.',
+    pulse: 'Watch for dedicated orchestration platforms that abstract model selection, and whether ComfyUI becomes the de facto standard for multi-model video pipelines.'
+  },
+  {
+    slug: 'ai-video-state-laws-46-states',
+    title: '46 States Now Have AI Video and Deepfake Laws on the Books',
+    description: 'As of early 2026, 46 US states have enacted legislation targeting AI-generated media, creating a fragmented compliance landscape for video generation platforms operating nationally.',
+    publishedAt: '2026-03-03T12:00:00Z',
+    updatedAt: '2026-03-03T12:00:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'Analysis',
+    evidenceScore: 4,
+    riskScore: 4,
+    authorSlug: 'maya-chen',
+    tags: ['regulation', 'deepfake', 'policy-watch', 'transparency'],
+    sourceRefs: [130],
+    hook: 'With 46 state laws and counting, video generation platforms face a compliance maze that only federal preemption can resolve.',
+    angle: 'The Blackburn bill\'s explicit goal of overriding state laws explains its appeal to the industry — compliance with one federal standard is cheaper than navigating 46 different rules.',
+    pulse: 'Watch for whether platforms begin geo-restricting features state-by-state, or lobby harder for the federal framework as a single compliance surface.'
+  },
+  {
+    slug: 'pika-25-physics-aware-social-push',
+    title: 'Pika 2.5 Leans Into Physics-Aware Generation and Social Video',
+    description: 'Pika\'s 2.5 engine introduced physics-based interaction modeling and integrated sound effects, positioning the platform as the fastest and most physically realistic option for short-form social video.',
+    publishedAt: '2026-03-07T14:00:00Z',
+    updatedAt: '2026-03-07T14:00:00Z',
+    desk: 'Model Wire',
+    contentType: 'News',
+    evidenceScore: 3,
+    riskScore: 2,
+    authorSlug: 'nora-ellis',
+    tags: ['pika', 'model-wire', 'native-audio'],
+    sourceRefs: [30],
+    hook: 'Physics-aware generation that understands weight, squish, and liquid flow puts Pika in a different lane from competitors still producing dream-logic motion.',
+    angle: 'Pika\'s 30-90 second generation time and integrated audio position it as the speed leader for social-first creators who prioritize iteration over cinematic quality.',
+    pulse: 'Watch for whether Pika\'s physics engine attracts enterprise interest for product visualization and simulation use cases beyond social media.'
+  },
+  {
+    slug: 'eu-ai-act-deepfake-labeling-august-2026',
+    title: 'EU AI Act Deepfake Labeling Requirements Take Effect August 2026',
+    description: 'The EU AI Act\'s requirement that all AI-generated content be marked in machine-readable format takes effect August 2 2026, forcing video generation platforms to implement C2PA or equivalent provenance metadata.',
+    publishedAt: '2026-03-15T10:00:00Z',
+    updatedAt: '2026-03-15T10:00:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'Analysis',
+    evidenceScore: 4,
+    riskScore: 4,
+    authorSlug: 'maya-chen',
+    tags: ['regulation', 'transparency', 'c2pa', 'policy-watch'],
+    sourceRefs: [130],
+    hook: 'Five months remain before the EU mandates machine-readable AI labeling — and most video generation platforms have not shipped compliance features yet.',
+    angle: 'The August deadline creates a hard compliance cliff for any platform serving EU users, potentially forcing feature restrictions or regional withdrawals.',
+    pulse: 'Watch for whether platforms adopt C2PA as the default standard or fragment into competing provenance schemes that undermine interoperability.'
+  },
+  {
+    slug: 'runway-gen45-vera-rubin-one-day-port',
+    title: 'Runway Ports Gen-4.5 From Hopper to Vera Rubin in a Single Day',
+    description: 'Runway confirmed that its top-rated Gen-4.5 model was migrated from Nvidia Hopper to the new Vera Rubin architecture within one day, validating Rubin\'s backward compatibility for production video workloads.',
+    publishedAt: '2026-03-19T11:00:00Z',
+    updatedAt: '2026-03-19T11:00:00Z',
+    desk: 'Toolchain Desk',
+    contentType: 'News',
+    evidenceScore: 4,
+    riskScore: 1,
+    authorSlug: 'ethan-morales',
+    tags: ['runway', 'nvidia', 'infrastructure'],
+    sourceRefs: [135, 136, 4],
+    hook: 'A one-day port proves Vera Rubin is production-ready and backward-compatible, removing the biggest adoption blocker for video generation companies.',
+    angle: 'Fast hardware migration means video generation companies can chase new silicon performance gains without retraining or refactoring — a structural advantage for the Nvidia ecosystem.',
+    pulse: 'Watch for other video generation companies to announce Vera Rubin deployments, and whether inference cost drops follow the performance gains.'
   }
 ];
 
