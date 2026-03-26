@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { articles } from '../data/news.js';
+import { getAbsoluteSocialCardUrl } from '../lib/social-card.js';
 
 const {
   title,
@@ -60,13 +61,17 @@ const normalizeSocialImage = (imageSrc) => {
     return defaultSocialImage;
   }
 };
-const socialImage = normalizeSocialImage(article?.image?.src);
-const socialImageAlt = article?.title ?? `${siteName} social card`;
-const socialImageType = socialImage.includes('images.unsplash.com') || socialImage.endsWith('.jpg') || socialImage.endsWith('.jpeg')
-  ? 'image/jpeg'
-  : socialImage.endsWith('.png')
-    ? 'image/png'
-    : 'image/jpeg';
+const socialImage = article?.slug
+  ? getAbsoluteSocialCardUrl(siteUrl, article.slug)
+  : normalizeSocialImage(article?.image?.src);
+const socialImageAlt = article?.slug ? `${article.title} social preview card` : article?.title ?? `${siteName} social card`;
+const socialImageType = article?.slug
+  ? 'image/png'
+  : socialImage.includes('images.unsplash.com') || socialImage.endsWith('.jpg') || socialImage.endsWith('.jpeg')
+    ? 'image/jpeg'
+    : socialImage.endsWith('.png')
+      ? 'image/png'
+      : 'image/jpeg';
 const organizationSchema = {
   '@type': 'Organization',
   '@id': `${siteUrl}/#organization`,

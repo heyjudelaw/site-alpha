@@ -10,6 +10,7 @@
     "check:social": "node scripts/check-social-meta.mjs"
   },
   "dependencies": {
-    "astro": "^5.0.0"
+    "astro": "^5.0.0",
+    "sharp": "^0.34.5"
   }
 }
