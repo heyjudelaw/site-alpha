@@ -3028,6 +3028,11 @@ const storySeeds = [
     description: 'Chinese regulators summoned Manus CEO Xiao Hong and Chief Scientist Ji Yichao to Beijing, then barred both from leaving the country while the NDRC investigates whether the startup\'s $2 billion sale to Meta violated export control and investment laws.',
     publishedAt: '2026-03-25T18:00:00Z',
     updatedAt: '2026-03-26T09:00:00Z',
+    image: {
+      src: 'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1600&h=900&q=80',
+      alt: 'Beijing skyline at dusk — where Manus cofounders are now barred from leaving.',
+      source: 'Unsplash'
+    },
     desk: 'Policy/IP Watch',
     contentType: 'News',
     evidenceScore: 5,
@@ -3252,7 +3257,7 @@ export const articles = storySeeds.map((seed, index) => {
     keyPoints: buildKeyPoints(seed, reporting),
     body: seed.customBody ?? buildBody(seed, sources, index),
     correctionNote: seed.correctionNote ?? null,
-    image,
+    image: seed.image ?? image,
     sources
   };
 });
