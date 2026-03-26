@@ -852,6 +852,32 @@ export const sourcePool = [
     title: 'US News: Baltimore sues Elon Musks xAI over Grok sexual deepfakes',
     url: 'https://www.usnews.com/news/top-news/articles/2026-03-24/baltimore-sues-elon-musks-xai-over-grok-sexual-deepfakes',
     tier: 'Tier 2'
+  },
+  // --- Sources 152+ added March 26 2026 ---
+  {
+    title: 'Washington Post: China bars executives at Meta-owned Manus from leaving country',
+    url: 'https://www.washingtonpost.com/national-security/2026/03/25/meta-manus-china-executives-banned/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'Bloomberg: China bars Manus founders from leaving as Meta $2B deal reviewed',
+    url: 'https://www.bloomberg.com/news/articles/2026-03-25/china-restricts-manus-founders-from-leaving-china-ft-says',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'TechCrunch: The least surprising chapter of the Manus story',
+    url: 'https://techcrunch.com/2026/03/25/the-least-surprising-chapter-of-the-manus-story-is-whats-happening-right-now/',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'CNBC: Meta faces China probe over acquisition of AI agent startup Manus',
+    url: 'https://www.cnbc.com/2026/01/08/china-investigate-meta-acquisition-manus-export.html',
+    tier: 'Tier 2'
+  },
+  {
+    title: 'SCMP: Review of Meta-Manus deal underlines China tightening grip on AI exports',
+    url: 'https://www.scmp.com/tech/big-tech/article/3339335/review-meta-manus-deal-underlines-chinas-tightening-grip-ai-exports',
+    tier: 'Tier 2'
   }
 ];
 
@@ -2995,6 +3021,23 @@ const storySeeds = [
     hook: 'A one-day port proves Vera Rubin is production-ready and backward-compatible, removing the biggest adoption blocker for video generation companies.',
     angle: 'Fast hardware migration means video generation companies can chase new silicon performance gains without retraining or refactoring — a structural advantage for the Nvidia ecosystem.',
     pulse: 'Watch for other video generation companies to announce Vera Rubin deployments, and whether inference cost drops follow the performance gains.'
+  },
+  {
+    slug: 'china-bars-manus-cofounders-meta-deal',
+    title: 'China Bars Manus Cofounders From Leaving the Country as $2B Meta Deal Faces Regulatory Siege',
+    description: 'Chinese regulators summoned Manus CEO Xiao Hong and Chief Scientist Ji Yichao to Beijing, then barred both from leaving the country while the NDRC investigates whether the startup\'s $2 billion sale to Meta violated export control and investment laws.',
+    publishedAt: '2026-03-25T18:00:00Z',
+    updatedAt: '2026-03-26T09:00:00Z',
+    desk: 'Policy/IP Watch',
+    contentType: 'News',
+    evidenceScore: 5,
+    riskScore: 5,
+    authorSlug: 'maya-chen',
+    tags: ['meta', 'regulation', 'policy-watch'],
+    sourceRefs: [152, 153, 154, 155, 156],
+    hook: 'Beijing just made two founders physically unable to integrate with their acquirer — the most direct state intervention in a US-China AI deal to date.',
+    angle: 'The travel ban transforms a regulatory review into a de facto hostage scenario: Meta paid $2 billion for a company whose key engineers are now trapped in China, stalling integration and raising existential questions about the deal\'s value.',
+    pulse: 'Watch for whether Meta attempts to renegotiate terms, whether the NDRC escalates to a formal block, and whether this chills future cross-border AI acquisitions involving Chinese-origin founders.'
   }
 ];
 
